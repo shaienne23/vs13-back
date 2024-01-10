@@ -1,7 +1,30 @@
+
 ### IntelliJ IDEA ###
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+codeStyles
+codeStyleConfig.xml
+Project.xml
+.gitignore
+jpa-buddy.xml
+misc.xml
+modules.xml
+vcs.xml
+Aula-03
+.idea
+jpa-buddy.xml
+misc.xml
+vcs.xml
+.iml
+codeStyles
+codeStyleConfig.xml
+Project.xml
+.gitignore
+jpa-buddy.xml
+misc.xml
+modules.xml
+vcs.xml
 
 ### Eclipse ###
 .apt_generated

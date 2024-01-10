@@ -1,0 +1,31 @@
+SELECT * FROM VEM_SER.ENDERECO
+
+SELECT * FROM VEM_SER.PAIS 
+ORDER BY nome DESC;
+
+SELECT logradouro, cep
+FROM VEM_SER.ENDERECO
+WHERE UPPER(logradouro) LIKE 'A%';
+
+SELECT cep
+FROM VEM_SER.ENDERECO
+WHERE REPLACE(REPLACE(cep, '-', ''), ' ', '') LIKE '%0';
+
+SELECT numero FROM VEM_SER.ENDERECO
+WHERE numero BETWEEN 1 AND 100;
+
+SELECT cep, logradouro
+FROM VEM_SER.ENDERECO
+WHERE UPPER(logradouro) LIKE 'RUA%'
+ORDER BY REPLACE(REPLACE(cep, '-', ''), ' ', '') DESC;
+
+SELECT COUNT(*) AS total_enderecos
+FROM VEM_SER.ENDERECO
+
+SELECT id_cidade, COUNT(*) AS quantidade_enderecos
+FROM VEM_SER.ENDERECO
+GROUP BY id_cidade;
+
+
+
+
