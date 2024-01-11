@@ -4,14 +4,14 @@ SELECT *
 FROM Pessoa p
 RIGHT JOIN Contato c ON p.id_pessoa = c.id_pessoa;
 
--- tabelas Pessoa, PESSOA X PESSOA ENDERECO e Endereco Pessoa REVER NÃO ESTA PUXANDO A TABELA ENDERECO.
+-- tabelas Pessoa, PESSOA X PESSOA ENDERECO e Endereco Pessoa
 SELECT *
-FROM Pessoa p
+FROM VEM_SER.PESSOA p
+RIGHT JOIN VEM_SER.CONTATO c ON p.ID_PESSOA = c.ID_PESSOA
 RIGHT JOIN PESSOA_X_PESSOA_ENDERECO pxpe ON (p.id_pessoa = pxpe.ID_PESSOA)
-RIGHT JOIN ENDERECO.ID_ENDERECO epip ON (pxpe.ID_PESSOA  = tabelafinal);
+RIGHT JOIN VEM_SER.ENDERECO_PESSOA ep ON (pxpe.ID_ENDERECO  = ep.ID_ENDERECO)
 
 --Todas as tabelas (começando por pessoa) --Fazer um FULL JOIN entre tabelas:
-
 --Pessoa e Contato OKOK
 SELECT * FROM PESSOA p
 FULL JOIN CONTATO c ON p.ID_PESSOA = c.ID_PESSOA
@@ -32,6 +32,16 @@ WHERE EXISTS (
 
 --* Selecione id, nome da tabela pessoa junto com id, logradouro da tabela endereço
 
+SELECT
+p.ID_PESSOA AS ID,
+p.NOME AS DESCRICAO,
+'Pessoa' AS TIPO
+FROM PESSOA p
 
+UNION
 
-
+SELECT
+ep.ID_ENDERECO AS ID,
+ep. lOGRADOURO AS DESCRICAO,
+'endereço' AS TIPO
+FROM ENDERECO_PESSOA ep
