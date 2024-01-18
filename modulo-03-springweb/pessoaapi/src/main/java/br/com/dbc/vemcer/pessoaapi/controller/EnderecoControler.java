@@ -24,7 +24,7 @@ public class EnderecoControler {
     public List<Endereco> listByIdEndereco(@PathVariable("idEndereco") Integer id){
         return enderecoService.listByIdEndereco(id);
     }
-    @GetMapping("/endereco/{idPessoa}")//pessoa?seria por nome da pessoa?
+    @GetMapping("/{idPessoa}/pessoa")
     public List<Endereco> listByIdPessoa(@PathVariable("idPessoa") Integer idPessoa){
         return enderecoService.listByIdPessoa(idPessoa);
 

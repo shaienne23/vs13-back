@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 public class PessoaRepository {
     private static List<Pessoa> listaPessoas; // cria a arraylist para as informaçoes simuladas do banco de dados.
     private AtomicInteger COUNTER = new AtomicInteger(); // cria um contador e gerador de ID automatico.
+
     public PessoaRepository() {
         this.listaPessoas = new ArrayList<>();
         initializePessoas();

@@ -38,7 +38,7 @@ public List<Endereco> list() {
     }
 
 public void delete(Integer id) throws Exception{
-    Endereco enderecoRecuperado = getEndereco(id);// verificar se preciso mudar para id pessoa
+    Endereco enderecoRecuperado = getEndereco(id);
     enderecoRepository.delete(enderecoRecuperado);
 }
     public List<Endereco> listByIdEndereco(Integer id) {
