@@ -4,7 +4,6 @@ import br.com.dbc.vemcer.pessoaapi.entity.Endereco;
 import br.com.dbc.vemcer.pessoaapi.entity.Pessoa;
 import br.com.dbc.vemcer.pessoaapi.exceptions.RegraDeNegocioException;
 import br.com.dbc.vemcer.pessoaapi.repository.EnderecoRepository;
-import br.com.dbc.vemcer.pessoaapi.repository.PessoaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,15 +11,15 @@ import java.util.List;
 @Service
 public class EnderecoService {
     private final EnderecoRepository enderecoRepository;
-    private final PessoaRepository pessoaRepository;
+       private final PessoaService pessoaService;
 
-    public EnderecoService(EnderecoRepository enderecoRepository, PessoaRepository pessoaRepository) {
+    public EnderecoService(PessoaService pessoaService, EnderecoRepository enderecoRepository) {
         this.enderecoRepository = enderecoRepository;
-        this.pessoaRepository = pessoaRepository;
+        this.pessoaService = pessoaService;
     }
 
 public Endereco create(Integer idPessoa, Endereco endereco)throws Exception{
-    Pessoa pessoa = getPessoa(idPessoa);
+    Pessoa pessoa = pessoaService.findById(idPessoa);
     endereco.setIdPessoa(idPessoa);
     return  EnderecoRepository.create(endereco);
 }
@@ -30,7 +29,7 @@ public List<Endereco> list() {
     }
 
     public Endereco update(Integer idPessoa, Endereco enderecoAtualizar) throws Exception {
-        Pessoa pessoa = getPessoa(idPessoa);
+        Pessoa pessoa = pessoaService.findById(idPessoa);
         Endereco enderecoRecuperado = getEndereco(idPessoa);
         enderecoRecuperado.setTipo(enderecoAtualizar.getTipo());
         enderecoRecuperado.setLogradouro(enderecoAtualizar.getLogradouro());
@@ -62,12 +61,6 @@ public void delete(Integer id) throws Exception{
                 .filter(endereco -> endereco.getIdEndereco().equals(id))
                 .findFirst()
                 .orElseThrow(() ->  new RegraDeNegocioException("Endereço não encontrado!"));
-    }
-    private Pessoa getPessoa(Integer id) throws Exception{
-        return pessoaRepository.list().stream()
-                .filter(pessoa -> pessoa.getIdPessoa().equals(id))
-                .findFirst()
-                .orElseThrow(() -> new RegraDeNegocioException("Pessoa não encontrada!"));
     }
 
 }

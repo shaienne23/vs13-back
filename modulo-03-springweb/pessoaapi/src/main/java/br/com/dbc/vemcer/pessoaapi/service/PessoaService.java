@@ -43,6 +43,9 @@ public List<Pessoa> listByName(String nome){
     return pessoaRepository.listByName(nome);
 }
 
+public Pessoa findById(Integer id) throws Exception{
+    return getPessoa(id);
+}
 private Pessoa getPessoa(Integer id) throws Exception{
     Pessoa pessoaRecuperada = pessoaRepository.list().stream()
             .filter(pessoa -> pessoa.getIdPessoa().equals(id))
