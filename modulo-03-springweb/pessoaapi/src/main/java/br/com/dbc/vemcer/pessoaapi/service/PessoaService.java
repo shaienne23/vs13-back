@@ -1,14 +1,15 @@
 package br.com.dbc.vemcer.pessoaapi.service;
 
 import br.com.dbc.vemcer.pessoaapi.entity.Pessoa;
-import br.com.dbc.vemcer.pessoaapi.repository.ContatoRepository;
+import br.com.dbc.vemcer.pessoaapi.exceptions.RegraDeNegocioException;
 import br.com.dbc.vemcer.pessoaapi.repository.PessoaRepository;
-import io.micrometer.common.util.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
+
 import java.util.List;
-import java.util.Objects;
+
 
 @Service
 public class PessoaService {
@@ -19,18 +20,7 @@ public PessoaService(PessoaRepository pessoaRepository) {
     }
 
 public Pessoa create(Pessoa pessoa)throws Exception{
-    if (pessoa != null && StringUtils.isBlank(pessoa.getNome())) {
-        throw new Exception("Erro ao inserir,campo Nome vazio!");
-    } else if (pessoa != null && ObjectUtils.isEmpty(pessoa.getDataNascimento())) {
-               throw new Exception("Erro ao inserir,campo data de nascimento vazio!");
-    } else if (pessoa != null && StringUtils.isBlank(pessoa.getCpf())) {
-        throw new Exception("Erro ao inserir, campo CPF vazio!");
-    }else{
-        String cpf = pessoa.getCpf().replaceAll("[^0-9]", "");
-        if(cpf.length()!= 11){
-            throw new Exception("Erro ao inserir, o CPF deve ter 11 digitos!");
-        }
-    }return  pessoaRepository.create(pessoa);
+    return  pessoaRepository.create(pessoa);
 }
 
 public List<Pessoa> list() {
@@ -57,7 +47,7 @@ private Pessoa getPessoa(Integer id) throws Exception{
     Pessoa pessoaRecuperada = pessoaRepository.list().stream()
             .filter(pessoa -> pessoa.getIdPessoa().equals(id))
             .findFirst()
-            .orElseThrow(() -> new Exception("Pessoa não encontrada!"));
+            .orElseThrow(() -> new RegraDeNegocioException("Pessoa não encontrada!"));
     return pessoaRecuperada;
 }
 }

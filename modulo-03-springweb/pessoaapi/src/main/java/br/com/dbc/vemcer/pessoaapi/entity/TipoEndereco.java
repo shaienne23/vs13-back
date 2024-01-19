@@ -1,5 +1,7 @@
 package br.com.dbc.vemcer.pessoaapi.entity;
 
+import br.com.dbc.vemcer.pessoaapi.exceptions.RegraDeNegocioException;
+
 import java.util.Arrays;
 
 public enum TipoEndereco {
@@ -16,10 +18,10 @@ public enum TipoEndereco {
         return tipo;
     }
 
-    public static TipoEndereco ofTipo(Integer tipo){
+    public static TipoEndereco ofTipo(Integer tipo) throws RegraDeNegocioException {
         return Arrays.stream(TipoEndereco.values())
                 .filter(tp -> tp.getTipo().equals(tipo))
                 .findFirst()
-                .get();
+                .orElseThrow(() -> new RegraDeNegocioException("Tipo de Endereço inválido! "));
     }
 }

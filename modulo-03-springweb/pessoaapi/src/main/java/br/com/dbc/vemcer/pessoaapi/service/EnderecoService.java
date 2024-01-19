@@ -1,21 +1,26 @@
 package br.com.dbc.vemcer.pessoaapi.service;
 
 import br.com.dbc.vemcer.pessoaapi.entity.Endereco;
+import br.com.dbc.vemcer.pessoaapi.entity.Pessoa;
+import br.com.dbc.vemcer.pessoaapi.exceptions.RegraDeNegocioException;
 import br.com.dbc.vemcer.pessoaapi.repository.EnderecoRepository;
+import br.com.dbc.vemcer.pessoaapi.repository.PessoaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class EnderecoService {
+    private final EnderecoRepository enderecoRepository;
+    private final PessoaRepository pessoaRepository;
 
-private final EnderecoRepository enderecoRepository;
+    public EnderecoService(EnderecoRepository enderecoRepository, PessoaRepository pessoaRepository) {
+        this.enderecoRepository = enderecoRepository;
+        this.pessoaRepository = pessoaRepository;
+    }
 
-public EnderecoService(EnderecoRepository enderecoRepository) {
-    this.enderecoRepository = enderecoRepository;
-}
-
-public Endereco create(Integer idPessoa, Endereco endereco){
+public Endereco create(Integer idPessoa, Endereco endereco)throws Exception{
+    Pessoa pessoa = getPessoa(idPessoa);
     endereco.setIdPessoa(idPessoa);
     return  EnderecoRepository.create(endereco);
 }
@@ -25,6 +30,7 @@ public List<Endereco> list() {
     }
 
     public Endereco update(Integer idPessoa, Endereco enderecoAtualizar) throws Exception {
+        Pessoa pessoa = getPessoa(idPessoa);
         Endereco enderecoRecuperado = getEndereco(idPessoa);
         enderecoRecuperado.setTipo(enderecoAtualizar.getTipo());
         enderecoRecuperado.setLogradouro(enderecoAtualizar.getLogradouro());
@@ -47,7 +53,7 @@ public void delete(Integer id) throws Exception{
     public List<Endereco> listByIdPessoa(Integer idPessoa) {
         return enderecoRepository.listByIdPessoa(idPessoa);
     }
-public List<Endereco> listByName(String estado){
+    public List<Endereco> listByName(String estado){
     return enderecoRepository.listByName(estado);
 }
 
@@ -55,8 +61,13 @@ public List<Endereco> listByName(String estado){
         return enderecoRepository.list().stream()
                 .filter(endereco -> endereco.getIdEndereco().equals(id))
                 .findFirst()
-                .orElseThrow(() -> new Exception("Endereço não encontrado!"));
+                .orElseThrow(() ->  new RegraDeNegocioException("Endereço não encontrado!"));
     }
-
+    private Pessoa getPessoa(Integer id) throws Exception{
+        return pessoaRepository.list().stream()
+                .filter(pessoa -> pessoa.getIdPessoa().equals(id))
+                .findFirst()
+                .orElseThrow(() -> new RegraDeNegocioException("Pessoa não encontrada!"));
+    }
 
 }

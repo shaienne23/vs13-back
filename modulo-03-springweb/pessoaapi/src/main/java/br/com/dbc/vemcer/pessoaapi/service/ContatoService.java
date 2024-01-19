@@ -1,6 +1,7 @@
 package br.com.dbc.vemcer.pessoaapi.service;
 
 import br.com.dbc.vemcer.pessoaapi.entity.Contato;
+import br.com.dbc.vemcer.pessoaapi.exceptions.RegraDeNegocioException;
 import br.com.dbc.vemcer.pessoaapi.repository.ContatoRepository;
 import org.springframework.stereotype.Service;
 
@@ -46,7 +47,7 @@ private Contato getContato(Integer id) throws Exception{
     Contato contatoRecuperado = contatoRepository.list().stream()
             .filter(pessoa -> pessoa.getIdContato().equals(id))
             .findFirst()
-            .orElseThrow(() -> new Exception("Contato não encontrado!"));
+            .orElseThrow(() ->  new RegraDeNegocioException("Contato não encontrado!"));
     return contatoRecuperado;
 }
 }
