@@ -17,3 +17,10 @@ public class PessoaapiApplication {
 		ContatoRepository contatoRepository = new ContatoRepository(pessoaRepository);
 	}
 }
+//
+//
+//	public static void main(String[] args) {
+//		SpringApplication.run(PessoApiApplication.class, args);
+//	}
+//
+//}

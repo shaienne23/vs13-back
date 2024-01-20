@@ -1,19 +1,16 @@
-package br.com.dbc.vemcer.pessoaapi.entity;
+package br.com.dbc.vemcer.pessoaapi.dto;
 
-import lombok.AllArgsConstructor;
+import br.com.dbc.vemcer.pessoaapi.entity.TipoContato;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-@AllArgsConstructor
-@RequiredArgsConstructor
 @Data
+public class ContatoDTO {
 
-public class Contato {
     private Integer idContato;
     private Integer idPessoa;
     @NotNull(message = "Tipo de Contato não pode ser nulo")

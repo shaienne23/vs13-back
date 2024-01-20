@@ -4,19 +4,18 @@ import br.com.dbc.vemcer.pessoaapi.entity.Endereco;
 import br.com.dbc.vemcer.pessoaapi.entity.Pessoa;
 import br.com.dbc.vemcer.pessoaapi.exceptions.RegraDeNegocioException;
 import br.com.dbc.vemcer.pessoaapi.repository.EnderecoRepository;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@RequiredArgsConstructor
 @Service
+@Slf4j
 public class EnderecoService {
     private final EnderecoRepository enderecoRepository;
-       private final PessoaService pessoaService;
+    private final PessoaService pessoaService;
 
-    public EnderecoService(PessoaService pessoaService, EnderecoRepository enderecoRepository) {
-        this.enderecoRepository = enderecoRepository;
-        this.pessoaService = pessoaService;
-    }
 
 public Endereco create(Integer idPessoa, Endereco endereco)throws Exception{
     Pessoa pessoa = pessoaService.findById(idPessoa);

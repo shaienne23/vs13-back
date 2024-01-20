@@ -1,19 +1,14 @@
-package br.com.dbc.vemcer.pessoaapi.entity;
+package br.com.dbc.vemcer.pessoaapi.dto;
 
-
-import lombok.AllArgsConstructor;
+import br.com.dbc.vemcer.pessoaapi.entity.TipoEndereco;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-@AllArgsConstructor
-@RequiredArgsConstructor
 @Data
-
-public class Endereco {
+public class EnderecoCreateDTO {
     private Integer idEndereco;
     private Integer idPessoa;
     @NotNull(message = "O Tipo de endereço não pode ser Nulo!")

@@ -3,23 +3,20 @@ package br.com.dbc.vemcer.pessoaapi.service;
 import br.com.dbc.vemcer.pessoaapi.entity.Pessoa;
 import br.com.dbc.vemcer.pessoaapi.exceptions.RegraDeNegocioException;
 import br.com.dbc.vemcer.pessoaapi.repository.PessoaRepository;
-import org.apache.commons.lang3.StringUtils;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.springframework.util.ObjectUtils;
 
 
 import java.util.List;
 
-
+@RequiredArgsConstructor
 @Service
+@Slf4j
 public class PessoaService {
 private final PessoaRepository pessoaRepository;
 
-public PessoaService(PessoaRepository pessoaRepository) {
-            this.pessoaRepository =  pessoaRepository;
-    }
-
-public Pessoa create(Pessoa pessoa)throws Exception{
+    public Pessoa create(Pessoa pessoa)throws Exception{
     return  pessoaRepository.create(pessoa);
 }
 
