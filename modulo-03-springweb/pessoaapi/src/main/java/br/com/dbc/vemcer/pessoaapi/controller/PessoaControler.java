@@ -1,8 +1,8 @@
 package br.com.dbc.vemcer.pessoaapi.controller;
 
-import br.com.dbc.vemcer.pessoaapi.entity.Pessoa;
+import br.com.dbc.vemcer.pessoaapi.dto.PessoaCreateDTO;
+import br.com.dbc.vemcer.pessoaapi.dto.PessoaDTO;
 import br.com.dbc.vemcer.pessoaapi.service.PessoaService;
-import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,31 +37,38 @@ public class PessoaControler {
     }
 
     @GetMapping
-    public List<Pessoa> list() {
+    public ResponseEntity<List<PessoaDTO>> list() {
+        log.info("Listando Pessoa");
+        List<PessoaDTO> pessoasListadas = pessoaService.list();
+        log.info("Pessoas Listadas");
 
-        return pessoaService.list();
+        return new ResponseEntity<>(pessoasListadas, HttpStatus.OK);
     }
 
     @GetMapping ("/byname")
-    public List<Pessoa> listByName(@RequestParam("nome") String nome){
-        return pessoaService.listByName(nome);
+    public ResponseEntity<List<PessoaDTO>>listByName(@RequestParam("nome") String nome){
+        log.info("Listando Pessoa byname");
+        List<PessoaDTO> pessoasListadas = pessoaService.listByName(nome);
+        log.info("Pessoas byname Listadas");
+
+        return new ResponseEntity<>(pessoasListadas, HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<Pessoa> create(@Valid @RequestBody Pessoa pessoa) throws Exception {
+    public ResponseEntity<PessoaDTO> create(@Valid @RequestBody PessoaCreateDTO pessoa) throws Exception {
         log.info("Criando Pessoa");
-        pessoaService.create(pessoa);
+        PessoaDTO pessoaCriada = pessoaService.create(pessoa);
         log.info("Pessoa Criada");
-        return new ResponseEntity<>(HttpStatus.OK) ;
+        return new ResponseEntity<>(pessoaCriada, HttpStatus.OK) ;
     }
 
     @PutMapping("/{idPessoa}")
-    public ResponseEntity<Pessoa> update( @PathVariable("idPessoa") Integer id,
-                          @Valid @RequestBody Pessoa pessoaAtualizar) throws Exception{
+    public ResponseEntity<PessoaDTO> update( @PathVariable("idPessoa") Integer id,
+                          @Valid @RequestBody PessoaCreateDTO pessoaAtualizar) throws Exception{
         log.info("Alterando Pessoa");
-        pessoaService.update(id, pessoaAtualizar);
+        PessoaDTO pessoaAlterada = pessoaService.update(id, pessoaAtualizar);
         log.info("Pessoa Alterada!");
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(pessoaAlterada, HttpStatus.OK);
     }
     @DeleteMapping("/{idPessoa}")
     public ResponseEntity<Void> delete (@PathVariable("idPessoa") Integer id) throws Exception{

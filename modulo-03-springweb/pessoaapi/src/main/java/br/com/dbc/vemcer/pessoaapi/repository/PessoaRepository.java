@@ -1,6 +1,5 @@
 package br.com.dbc.vemcer.pessoaapi.repository;
 
-
 import br.com.dbc.vemcer.pessoaapi.entity.Pessoa;
 import org.springframework.stereotype.Repository;
 

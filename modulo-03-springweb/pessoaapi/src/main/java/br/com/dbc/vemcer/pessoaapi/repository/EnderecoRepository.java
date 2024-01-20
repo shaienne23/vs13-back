@@ -79,7 +79,7 @@ public class EnderecoRepository {
 
     }
 
-    public List<Endereco> listByName(String estado) {
+    public List<Endereco> listByEstado(String estado) {
         return listaEnderecos.stream()
                 .filter(endereco -> endereco.getEstado().toUpperCase().contains(estado.toUpperCase()))
                 .collect(Collectors.toList());

@@ -1,5 +1,7 @@
 package br.com.dbc.vemcer.pessoaapi.controller;
 
+import br.com.dbc.vemcer.pessoaapi.dto.ContatoCreateDTO;
+import br.com.dbc.vemcer.pessoaapi.dto.ContatoDTO;
 import br.com.dbc.vemcer.pessoaapi.entity.Contato;
 import br.com.dbc.vemcer.pessoaapi.service.ContatoService;
 import lombok.extern.slf4j.Slf4j;
@@ -23,30 +25,34 @@ public class ContatoControler {
     }
 
     @GetMapping
-    public List<Contato> list() {
-        return contatoService.list();
+    public ResponseEntity<List<ContatoDTO>> list() {
+        log.info("Listando Contatos.");
+        List<ContatoDTO> contatosListados = contatoService.list();
+        return new ResponseEntity<>(contatosListados, HttpStatus.OK);
     }
 
     @GetMapping ("/byname")
-    public List<Contato> listByName(@RequestParam("descricao") String descricao){
-        return contatoService.listByName(descricao);
+    public ResponseEntity<List<ContatoDTO>> listByName(@RequestParam("descricao") String descricao){
+        log.info("Listando Contato ByName");
+        List<ContatoDTO> contatosListadoName = contatoService.listByName(descricao);
+        return new ResponseEntity<>(contatosListadoName, HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<Contato>create(@Valid @RequestBody Contato contato)throws Exception{
+    public ResponseEntity<ContatoDTO>create(@Valid @RequestBody ContatoCreateDTO contato)throws Exception{
         log.info("Criando Contato. ");
-        contatoService.create(contato);
+        ContatoDTO contatoDTO = contatoService.create(contato);
         log.info("Contato Criado!");
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(contatoDTO, HttpStatus.OK);
     }
 
     @PutMapping("/{idContato}")
-    public ResponseEntity<Contato>update( @PathVariable("idContato") Integer id,
-                          @Valid @RequestBody Contato contatoAtualizar) throws Exception{
-    log.info("Alterando Contato.");
-        contatoService.update(id, contatoAtualizar);
+    public ResponseEntity<ContatoDTO>update( @PathVariable("idContato") Integer id,
+                          @Valid @RequestBody ContatoCreateDTO contatoAtualizar) throws Exception{
+        log.info("Alterando Contato.");
+        ContatoDTO contatoAtualizado = contatoService.update(id, contatoAtualizar);
         log.info("Contato Atualizado!");
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(contatoAtualizado, HttpStatus.OK);
     }
     @DeleteMapping("/{idContato}")
     public ResponseEntity<Void> delete (@PathVariable("idContato") Integer id) throws Exception{

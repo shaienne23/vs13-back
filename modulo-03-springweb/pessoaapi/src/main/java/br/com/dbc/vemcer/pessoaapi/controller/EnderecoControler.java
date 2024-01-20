@@ -1,6 +1,7 @@
 package br.com.dbc.vemcer.pessoaapi.controller;
 
-import br.com.dbc.vemcer.pessoaapi.entity.Endereco;
+import br.com.dbc.vemcer.pessoaapi.dto.EnderecoCreateDTO;
+import br.com.dbc.vemcer.pessoaapi.dto.EnderecoDTO;
 import br.com.dbc.vemcer.pessoaapi.service.EnderecoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -22,40 +23,47 @@ public class EnderecoControler {
     }
 
     @GetMapping
-    public List<Endereco> listAll() {
-        return enderecoService.list();
+    public ResponseEntity<List<EnderecoDTO>> listAll() {
+        log.info("Listando Endereço.");
+        List<EnderecoDTO> enderecosListados = enderecoService.list();
+        return new ResponseEntity<>(enderecosListados, HttpStatus.OK);
     }
 
     @GetMapping("/{idEndereco}")
-    public List<Endereco> listByIdEndereco(@PathVariable("idEndereco") Integer id){
-        return enderecoService.listByIdEndereco(id);
+    public ResponseEntity<List<EnderecoDTO>>listByIdEndereco(@PathVariable("idEndereco") Integer id){
+        log.info("Listando endereços por Id.");
+        List<EnderecoDTO> enderecosListados = enderecoService.listByIdEndereco(id);
+        return new ResponseEntity<>(enderecosListados, HttpStatus.OK);
     }
     @GetMapping("/{idPessoa}/pessoa")
-    public List<Endereco> listByIdPessoa(@PathVariable("idPessoa") Integer idPessoa){
-        return enderecoService.listByIdPessoa(idPessoa);
-
+    public ResponseEntity<List<EnderecoDTO>> listByIdPessoa(@PathVariable("idPessoa") Integer idPessoa){
+        log.info("Listando endereços por idPessoa.");
+        List<EnderecoDTO> enderecosListadosId = enderecoService.listByIdPessoa(idPessoa);
+        return new ResponseEntity<>(enderecosListadosId, HttpStatus.OK);
     }
     @GetMapping ("/byname")
-    public List<Endereco> listByName(@RequestParam("estado") String estado){
-        return enderecoService.listByName(estado);
+    public ResponseEntity<List<EnderecoDTO>> listByEstado(@RequestParam("estado") String estado){
+        log.info("Listando endereços por Estado.");
+        List<EnderecoDTO> enderecoPorEstado = enderecoService.listByEstado(estado);
+        return new ResponseEntity<>(enderecoPorEstado, HttpStatus.OK);
     }
 
     @PostMapping ("/{idPessoa}")
-    public ResponseEntity<Endereco> create( @PathVariable("idPessoa") Integer idPessoa,
-                            @Valid @RequestBody Endereco endereco)throws Exception{
+    public ResponseEntity<EnderecoDTO> create(@PathVariable("idPessoa") Integer idPessoa,
+                                              @Valid @RequestBody EnderecoCreateDTO endereco)throws Exception{
         log.info("Criando Endereço");
-        enderecoService.create(idPessoa, endereco);
+        EnderecoDTO enderecoCriado = enderecoService.create(idPessoa, endereco);
         log.info("Endereço Criado!");
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(enderecoCriado,HttpStatus.OK);
     }
 
     @PutMapping("/{idEndereco}")
-    public ResponseEntity<Endereco> update( @PathVariable("idEndereco") Integer id,
-                          @Valid @RequestBody Endereco enderecoAtualizar) throws Exception{
+    public ResponseEntity<EnderecoDTO> update( @PathVariable("idEndereco") Integer id,
+                          @Valid @RequestBody EnderecoCreateDTO enderecoAtualizar) throws Exception{
         log.info("Alterando Endereço");
-        enderecoService.update(id, enderecoAtualizar);
+        EnderecoDTO enderecoParaAtualizar = enderecoService.update(id, enderecoAtualizar);
         log.info("Criando Endereço!");
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(enderecoParaAtualizar, HttpStatus.OK);
     }
     @DeleteMapping("/{idEndereco}")
     public ResponseEntity<Void> delete (@PathVariable("idEndereco") Integer id) throws Exception{
