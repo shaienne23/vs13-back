@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e07bf969-ad3b-4b38-bd5f-2e52fc84db4d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/Aula-01.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/out/production/Aula-01/Exercicio01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/out/production/Aula-01/Exercicio02.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/out/production/Aula-01/Exercicio03.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/out/production/Aula-01/Exercicio04.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/out/production/Aula-01/Exercicio05.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/out/production/Aula-01/Exercicio06.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/out/production/Aula-01/Exercicio07.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/out/production/Aula-01/Exercicio08.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/out/production/Aula-01/Exercicio09.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-01/out/production/Aula-01/Exercicio10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-03/conta-corrente1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-03/conta-corrente1/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-03/conta-corrente1/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-03/conta-corrente1/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-03/conta-corrente1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-03/conta-corrente1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-03/conta-corrente1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-01-java/Aula-03/conta-corrente1/conta-corrente1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-02-bd/aula-03/task-03.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../modulo-02-bd/aula-03/task-03.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2b3Tyk5SjBCFyWGMkkiDmmYnWHr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/rafae/DBC-TASKS/vs13-squad8-TerrAtiva",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "PLAIN_TEXT"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.dbc.vemcer.pessoaapi.controller" />
+      <recent name="br.com.dbc.vemcer.pessoaapi.service" />
+      <recent name="br.com.dbc.vemcer.pessoaapi.repository" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="PessoaapiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.dbc.vemcer.pessoaapi.PessoaapiApplication" />
+      <module name="pessoaapi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.dbc.vemcer.pessoaapi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PessoaapiApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e07bf969-ad3b-4b38-bd5f-2e52fc84db4d" name="Changes" comment="" />
+      <created>1705443022765</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1705443022765</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../../.." />
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/pessoaapi$PessoaapiApplication.ic" NAME="PessoaapiApplication Coverage Results" MODIFIED="1705443243919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.dbc.vemcer.pessoaapi.*</FILTER>
+    </SUITE>
+  </component>
+</project>
