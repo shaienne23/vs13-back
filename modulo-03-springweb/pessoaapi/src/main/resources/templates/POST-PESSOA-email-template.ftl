@@ -20,7 +20,7 @@
                             Estamos felizes em tê-lo em nosso sistema ;) <br>
 
                             Seu cadastro foi realizado com sucesso, seu identificador é ${id}. <br>
-                            Qualquer dúvida, é só contatar o suporte pelo e-mail EMAIL. <br>
+                            Qualquer dúvida, é só contatar o suporte pelo e-mail ${email} <br>
                             <br> Att, Sistema.
                         </div>
                         <div>

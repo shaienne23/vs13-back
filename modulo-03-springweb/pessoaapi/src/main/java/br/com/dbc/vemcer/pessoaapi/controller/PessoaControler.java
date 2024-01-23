@@ -63,7 +63,8 @@ public class PessoaControler {
 
         return new ResponseEntity<>(pessoasListadas, HttpStatus.OK);
     }
-
+    @Value("${spring.mail.username}")
+    private String email;
     @PostMapping
     public ResponseEntity<PessoaDTO> create(@Valid @RequestBody PessoaCreateDTO pessoa) throws Exception {
         log.info("Criando Pessoa");

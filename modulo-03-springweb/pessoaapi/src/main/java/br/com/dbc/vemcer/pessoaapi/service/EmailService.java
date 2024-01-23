@@ -2,6 +2,7 @@ package br.com.dbc.vemcer.pessoaapi.service;
 
 import br.com.dbc.vemcer.pessoaapi.dto.PessoaDTO;
 import br.com.dbc.vemcer.pessoaapi.entity.Pessoa;
+import freemarker.core.Environment;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +27,8 @@ public class EmailService {
 
     private final freemarker.template.Configuration fmConfiguration;
 
+    @Value("${spring.mail.username}")
+    private String email;
     @Value("${spring.mail.username}")
     private String from;
     private String to = "shaienne.oliveira@dbccompany.com.br";
@@ -111,6 +114,7 @@ public class EmailService {
 
         Map<String, Object> dados = new HashMap<>();
         dados.put("nome", "Shaienne");
+        dados.put("email", email);
 
         if ("PESSOA".equalsIgnoreCase(entidade) && id != null) {
             dados.put("id", id);

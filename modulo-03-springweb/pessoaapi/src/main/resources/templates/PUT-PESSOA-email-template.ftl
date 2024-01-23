@@ -24,7 +24,7 @@
                         </div>
                             Seu Seus dados foram atualizados no nosso sistema.
 
-                            Qualquer dúvida, é só contatar o suporte pelo e-mail EMAIL. <br>
+                            Qualquer dúvida, é só contatar o suporte pelo e-mail ${email}. <br>
                             <br> Att, Sistema.
                         </div>
                         <div>

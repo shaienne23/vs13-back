@@ -20,7 +20,7 @@
                             Estamos felizes em tê-lo em nosso sistema ;) <br>
 
                             Seu Endereço foi cadastrado com sucesso. <br>
-                            Qualquer dúvida, é só contatar o suporte pelo e-mail EMAIL. <br>
+                            Qualquer dúvida, é só contatar o suporte pelo e-mail ${email}. <br>
                             <br> Att, Sistema.
                         </div>
                         <div>
