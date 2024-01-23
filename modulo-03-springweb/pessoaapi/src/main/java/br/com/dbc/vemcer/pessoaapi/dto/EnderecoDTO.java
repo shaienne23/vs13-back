@@ -1,8 +1,9 @@
 package br.com.dbc.vemcer.pessoaapi.dto;
 
 import br.com.dbc.vemcer.pessoaapi.entity.TipoEndereco;
+import io.swagger.v3.oas.annotations.Hidden;
 import lombok.Data;
-
+@Hidden
 @Data
 public class EnderecoDTO {
     private Integer idEndereco;

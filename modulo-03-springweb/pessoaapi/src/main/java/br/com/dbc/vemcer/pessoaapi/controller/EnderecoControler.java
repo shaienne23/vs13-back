@@ -1,6 +1,7 @@
 package br.com.dbc.vemcer.pessoaapi.controller;
 
 import br.com.dbc.vemcer.pessoaapi.config.PropertiesReader;
+import br.com.dbc.vemcer.pessoaapi.controller.interfaces.IEnderecoController;
 import br.com.dbc.vemcer.pessoaapi.dto.EnderecoCreateDTO;
 import br.com.dbc.vemcer.pessoaapi.dto.EnderecoDTO;
 import br.com.dbc.vemcer.pessoaapi.service.EmailService;
@@ -23,7 +24,7 @@ import java.util.List;
 @Component
 
 @RequestMapping("/endereco")
-public class EnderecoControler {
+public class EnderecoControler implements IEnderecoController {
     private final EnderecoService enderecoService;
 
     private final PropertiesReader propertiesReader;

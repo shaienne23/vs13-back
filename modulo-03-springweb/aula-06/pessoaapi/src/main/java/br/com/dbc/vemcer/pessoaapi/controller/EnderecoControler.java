@@ -63,7 +63,7 @@ public class EnderecoControler {
         EnderecoDTO enderecoCriado = enderecoService.create(idPessoa, endereco);
         log.info("Endereço Criado!");
 
-        String contentEndereco = emailService.geContentFromTemplate("POST", "ENDERECO");
+        String contentEndereco = emailService.geContentFromTemplate("POST", "ENDERECO", null);
         emailService.sendEmail(contentEndereco);
 
         return new ResponseEntity<>(enderecoCriado, HttpStatus.OK);
@@ -77,7 +77,7 @@ public class EnderecoControler {
         EnderecoDTO enderecoParaAtualizar = enderecoService.update(id, enderecoAtualizar);
         log.info("Endereço Alterado!");
 
-        String contentEndereco = emailService.geContentFromTemplate("PUT", "ENDERECO");
+        String contentEndereco = emailService.geContentFromTemplate("PUT", "ENDERECO", null);
         emailService.sendEmail(contentEndereco);
 
         return new ResponseEntity<>(enderecoParaAtualizar, HttpStatus.OK);
@@ -88,7 +88,7 @@ public class EnderecoControler {
         enderecoService.delete(id);
         log.info("Endereço Deletado!");
 
-        String contentEndereco = emailService.geContentFromTemplate("DELETE", "ENDERECO");
+        String contentEndereco = emailService.geContentFromTemplate("DELETE", "ENDERECO", null);
         emailService.sendEmail(contentEndereco);
 
         return ResponseEntity.ok().build();

@@ -1,6 +1,7 @@
 package br.com.dbc.vemcer.pessoaapi.controller;
 
 import br.com.dbc.vemcer.pessoaapi.config.PropertiesReader;
+import br.com.dbc.vemcer.pessoaapi.controller.interfaces.IPessoaController;
 import br.com.dbc.vemcer.pessoaapi.dto.PessoaCreateDTO;
 import br.com.dbc.vemcer.pessoaapi.dto.PessoaDTO;
 import br.com.dbc.vemcer.pessoaapi.service.EmailService;
@@ -24,27 +25,12 @@ import java.util.List;
 @Slf4j
 @Component
 
-
-
-
-
-public class PessoaControler {
+public class PessoaControler implements IPessoaController {
 
     private final PessoaService pessoaService;
     private final PropertiesReader propertiesReader;
     private final EmailService emailService;
 
-    @GetMapping("/hello")
-    public String hello(){
-        log.trace("A TRACE Message");
-        log.warn("A WARN Message");
-               return "Hello WORLD!\n" + " <br>App:   <br>Usuario: " + log.isErrorEnabled();
-    }
-
-    @GetMapping("/hello2")
-    public String hello2(){
-        return "Hello World 2!";
-    }
 
     @GetMapping
     public ResponseEntity<List<PessoaDTO>> list() {
@@ -102,7 +88,6 @@ public class PessoaControler {
     @Value("${spring.application.name}")
     private String app;
     @GetMapping("/ambiente")
-
     public String getAmbiente() {
         log.info("Enviando ambiente Pessoa");
         return propertiesReader.getAmbiente();

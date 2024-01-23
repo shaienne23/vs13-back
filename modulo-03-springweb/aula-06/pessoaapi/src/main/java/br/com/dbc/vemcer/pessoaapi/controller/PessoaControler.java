@@ -63,14 +63,15 @@ public class PessoaControler {
 
         return new ResponseEntity<>(pessoasListadas, HttpStatus.OK);
     }
-
+    @Value("${spring.mail.username}")
+    private String email;
     @PostMapping
     public ResponseEntity<PessoaDTO> create(@Valid @RequestBody PessoaCreateDTO pessoa) throws Exception {
         log.info("Criando Pessoa");
         PessoaDTO pessoaCriada = pessoaService.create(pessoa);
         log.info("Pessoa Criada");
 
-        String content = emailService.geContentFromTemplate( "POST","PESSOA");
+        String content = emailService.geContentFromTemplate("POST", "PESSOA", pessoaCriada.getIdPessoa());
         emailService.sendEmail(content);
 
         return new ResponseEntity<>(pessoaCriada, HttpStatus.OK) ;
@@ -83,7 +84,7 @@ public class PessoaControler {
         PessoaDTO pessoaAlterada = pessoaService.update(id, pessoaAtualizar);
         log.info("Pessoa Alterada!");
 
-        String content = emailService.geContentFromTemplate( "PUT","PESSOA");
+        String content = emailService.geContentFromTemplate( "PUT","PESSOA", pessoaAlterada.getIdPessoa());
         emailService.sendEmail(content);
 
         return new ResponseEntity<>(pessoaAlterada, HttpStatus.OK);
@@ -93,7 +94,8 @@ public class PessoaControler {
         log.info("Deletando Pessoa");
         pessoaService.delete(id);
         log.info("Pessoa Deletada");
-        String content = emailService.geContentFromTemplate( "DELETE","PESSOA");
+        String content = emailService.geContentFromTemplate(
+                "DELETE","PESSOA", null);
         emailService.sendEmail(content);
         return ResponseEntity.ok().build();
     }
@@ -113,7 +115,7 @@ public class PessoaControler {
         //emailService.sendSimpleMessage();
         //emailService.sendWithAttachment();
 
-        String content = emailService.geContentFromTemplate( "GET", "PESSOA");
+        String content = emailService.geContentFromTemplate( "GET", "PESSOA", null);
         emailService.sendEmail(content);
 
         log.info("E-mail enviado!");

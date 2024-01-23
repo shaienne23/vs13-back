@@ -1,5 +1,6 @@
 package br.com.dbc.vemcer.pessoaapi.controller;
 
+import br.com.dbc.vemcer.pessoaapi.controller.interfaces.IContatoController;
 import br.com.dbc.vemcer.pessoaapi.dto.ContatoCreateDTO;
 import br.com.dbc.vemcer.pessoaapi.dto.ContatoDTO;
 import br.com.dbc.vemcer.pessoaapi.service.ContatoService;
@@ -18,7 +19,8 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/contato")
-public class ContatoControler {
+
+public class ContatoControler implements IContatoController {
     private final ContatoService contatoService;
 
     @GetMapping
