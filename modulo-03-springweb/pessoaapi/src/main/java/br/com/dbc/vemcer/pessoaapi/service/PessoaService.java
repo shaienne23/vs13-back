@@ -58,11 +58,12 @@ private final ObjectMapper objectMapper;
         return objectMapper.convertValue(pessoaRepository.update(id, pessoaRecuperada), PessoaDTO.class);
     }
 
-    public void delete(Integer id) throws Exception{
+    public void delete(Integer id) throws Exception {
         log.info("Deletando Pessoa na camada Service");
-     Pessoa pessoaRecuperada = getPessoa(id);
-     pessoaRepository.delete(pessoaRecuperada);
-}
+        Pessoa pessoaRecuperada = getPessoa(id);
+        pessoaRepository.delete(pessoaRecuperada);
+
+    }
     private Pessoa getPessoa(Integer id) throws Exception{
         Pessoa pessoaRecuperada = pessoaRepository.list().stream()
             .filter(pessoa -> pessoa.getIdPessoa().equals(id))

@@ -1,28 +1,38 @@
 package br.com.dbc.vemcer.pessoaapi.controller;
 
+import br.com.dbc.vemcer.pessoaapi.config.PropertiesReader;
 import br.com.dbc.vemcer.pessoaapi.dto.PessoaCreateDTO;
 import br.com.dbc.vemcer.pessoaapi.dto.PessoaDTO;
+import br.com.dbc.vemcer.pessoaapi.service.EmailService;
 import br.com.dbc.vemcer.pessoaapi.service.PessoaService;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
 
-@Slf4j
-@Validated
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/pessoa")
+@Validated
+@Slf4j
+@Component
+
+
+
+
+
 public class PessoaControler {
 
     private final PessoaService pessoaService;
-
-    public PessoaControler(PessoaService pessoaService){
-        this.pessoaService = pessoaService;
-    }
+    private final PropertiesReader propertiesReader;
+    private final EmailService emailService;
 
     @GetMapping("/hello")
     public String hello(){
@@ -59,6 +69,10 @@ public class PessoaControler {
         log.info("Criando Pessoa");
         PessoaDTO pessoaCriada = pessoaService.create(pessoa);
         log.info("Pessoa Criada");
+
+        String content = emailService.geContentFromTemplate("POST", "PESSOA", pessoaCriada.getIdPessoa());
+        emailService.sendEmail(content);
+
         return new ResponseEntity<>(pessoaCriada, HttpStatus.OK) ;
     }
 
@@ -68,6 +82,10 @@ public class PessoaControler {
         log.info("Alterando Pessoa");
         PessoaDTO pessoaAlterada = pessoaService.update(id, pessoaAtualizar);
         log.info("Pessoa Alterada!");
+
+        String content = emailService.geContentFromTemplate( "PUT","PESSOA", pessoaAlterada.getIdPessoa());
+        emailService.sendEmail(content);
+
         return new ResponseEntity<>(pessoaAlterada, HttpStatus.OK);
     }
     @DeleteMapping("/{idPessoa}")
@@ -75,6 +93,31 @@ public class PessoaControler {
         log.info("Deletando Pessoa");
         pessoaService.delete(id);
         log.info("Pessoa Deletada");
+        String content = emailService.geContentFromTemplate(
+                "DELETE","PESSOA", null);
+        emailService.sendEmail(content);
         return ResponseEntity.ok().build();
     }
-}
+    @Value("${spring.application.name}")
+    private String app;
+    @GetMapping("/ambiente")
+
+    public String getAmbiente() {
+        log.info("Enviando ambiente Pessoa");
+        return propertiesReader.getAmbiente();
+
+    }
+
+    @GetMapping("/email")
+    public String email() throws Exception {
+        log.info("Enviando email Pessoa");
+        //emailService.sendSimpleMessage();
+        //emailService.sendWithAttachment();
+
+        String content = emailService.geContentFromTemplate( "GET", "PESSOA", null);
+        emailService.sendEmail(content);
+
+        log.info("E-mail enviado!");
+        return "E-mail enviado pela " + app + "!";
+
+}}

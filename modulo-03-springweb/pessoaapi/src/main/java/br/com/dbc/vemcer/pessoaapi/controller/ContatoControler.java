@@ -2,8 +2,8 @@ package br.com.dbc.vemcer.pessoaapi.controller;
 
 import br.com.dbc.vemcer.pessoaapi.dto.ContatoCreateDTO;
 import br.com.dbc.vemcer.pessoaapi.dto.ContatoDTO;
-import br.com.dbc.vemcer.pessoaapi.entity.Contato;
 import br.com.dbc.vemcer.pessoaapi.service.ContatoService;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,13 +16,10 @@ import java.util.List;
 @Slf4j
 @Validated
 @RestController
+@AllArgsConstructor
 @RequestMapping("/contato")
 public class ContatoControler {
     private final ContatoService contatoService;
-
-    public ContatoControler(ContatoService contatoService) {
-        this.contatoService = contatoService;
-    }
 
     @GetMapping
     public ResponseEntity<List<ContatoDTO>> list() {
@@ -61,4 +58,6 @@ public class ContatoControler {
         log.info("Contato Deletado!");
         return ResponseEntity.ok().build();
     }
+
+
 }

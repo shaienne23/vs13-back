@@ -89,7 +89,7 @@ public class EmailService {
             throw new Exception("Erro ao enviar e-mail: " + e.getMessage());
         }
     }
-     public String geContentFromTemplate(String acao, String entidade) throws IOException, TemplateException {
+    public String geContentFromTemplate(String acao, String entidade, Integer id) throws IOException, TemplateException {
         String templateName;
 
         switch (acao.toUpperCase()) {
@@ -112,9 +112,14 @@ public class EmailService {
         Map<String, Object> dados = new HashMap<>();
         dados.put("nome", "Shaienne");
 
+        if ("PESSOA".equalsIgnoreCase(entidade) && id != null) {
+            dados.put("id", id);
+        }
+
         Template template = fmConfiguration.getTemplate(templateName);
         String html = FreeMarkerTemplateUtils.processTemplateIntoString(template, dados);
         return html;
     }
+
 
 }
