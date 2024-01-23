@@ -29,6 +29,9 @@ public class EmailService {
 
     @Value("${spring.mail.username}")
     private String email;
+
+    @Value("${usuario}")
+    private String usuario;
     @Value("${spring.mail.username}")
     private String from;
     private String to = "shaienne.oliveira@dbccompany.com.br";
@@ -113,7 +116,7 @@ public class EmailService {
         }
 
         Map<String, Object> dados = new HashMap<>();
-        dados.put("nome", "Shaienne");
+        dados.put("nome", usuario);
         dados.put("email", email);
 
         if ("PESSOA".equalsIgnoreCase(entidade) && id != null) {
