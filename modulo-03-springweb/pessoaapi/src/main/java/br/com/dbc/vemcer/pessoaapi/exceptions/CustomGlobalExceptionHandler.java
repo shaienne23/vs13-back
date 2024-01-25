@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.ConstraintViolationException;
 import java.util.Date;
@@ -19,7 +18,6 @@ import java.util.stream.Collectors;
 
 @ControllerAdvice
 public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler {
-
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
                                                                   HttpHeaders headers,
@@ -35,12 +33,9 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
                 .stream()
                 .map(x -> x.getField() + ": " + x.getDefaultMessage())
                 .collect(Collectors.toList());
-
         body.put("errors", errors);
-
         return new ResponseEntity<>(body, headers, status);
     }
-
     @ExceptionHandler(br.com.dbc.vemcer.pessoaapi.exceptions.RegraDeNegocioException.class)
     public ResponseEntity<Object> handleException(br.com.dbc.vemcer.pessoaapi.exceptions.RegraDeNegocioException exception,
                                                   HttpServletRequest request) {
@@ -50,7 +45,6 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
         body.put("message", exception.getMessage());
         return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
     }
-
     @ExceptionHandler(ConstraintViolationException.class)
     public ResponseEntity<Object> handleException(ConstraintViolationException exception,
                                                   HttpServletRequest request) {

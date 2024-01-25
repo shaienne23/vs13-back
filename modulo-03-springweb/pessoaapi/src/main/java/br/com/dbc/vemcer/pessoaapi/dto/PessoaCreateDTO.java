@@ -22,7 +22,7 @@ public class PessoaCreateDTO {
 
         @NotNull(message = "A data de nascimento não pode ser nula")
         @Past(message = "A data de Nascimento deve ser no passado!")
-        @Schema(description = "Data de Nascimento", required = true, example = "28/05/1991")
+        @Schema(description = "Data de Nascimento", required = true, example = "1991-05-28")
         private LocalDate dataNascimento;
 
         @CPF(message = "CPF Invalido!")

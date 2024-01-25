@@ -10,10 +10,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.stream.Collectors;
-
 @RequiredArgsConstructor
 @Service
 @Slf4j
@@ -21,9 +19,7 @@ public class EnderecoService {
     private final EnderecoRepository enderecoRepository;
     private final PessoaService pessoaService;
     private final ObjectMapper objectMapper;
-
     public List<EnderecoDTO> list() {
-        log.info("Listando endereços na camada Service.");
         List<Endereco> enderecos = enderecoRepository.list();
 
         return enderecos.stream()
@@ -31,7 +27,6 @@ public class EnderecoService {
                 .collect(Collectors.toList());
     }
     public List<EnderecoDTO> listByIdEndereco(Integer id) {
-        log.info("Listando endereçosbyID na camada Service.");
         List<Endereco> enderecos = enderecoRepository.listByIdEndereco(id);
 
         return enderecos.stream()
@@ -39,7 +34,6 @@ public class EnderecoService {
                 .collect(Collectors.toList());
     }
     public List<EnderecoDTO> listByIdPessoa(Integer idPessoa) {
-        log.info("Listando endereçosbyIdPessoa na camada Service.");
         List<Endereco> enderecos = enderecoRepository.listByIdPessoa(idPessoa);
 
         return enderecos.stream()
@@ -47,7 +41,6 @@ public class EnderecoService {
                 .collect(Collectors.toList());
     }
     public List<EnderecoDTO> listByEstado(String estado){
-        log.info("Listando endereçosbyEstado na camada Service.");
         List<Endereco> enderecos = enderecoRepository.listByEstado(estado);
 
         return enderecos.stream()
@@ -55,7 +48,6 @@ public class EnderecoService {
                 .collect(Collectors.toList());
     }
     public EnderecoDTO create(Integer idPessoa, EnderecoCreateDTO enderecoCreateDTO)throws Exception{
-        log.info("Ciando endereço na camada service.");
         Pessoa pessoa = pessoaService.findById(idPessoa);
         Endereco enderecoEntity = objectMapper.convertValue(enderecoCreateDTO, Endereco.class);
         enderecoEntity = EnderecoRepository.create(enderecoEntity);
@@ -64,22 +56,10 @@ public class EnderecoService {
         return enderecoDTO;
     }
     public EnderecoDTO update(Integer idPessoa, EnderecoCreateDTO enderecoAtualizar) throws Exception {
-        log.info("Atualizando endereço na camada Service.");
-        Pessoa pessoa = pessoaService.findById(idPessoa);
-        Endereco enderecoRecuperado = getEndereco(idPessoa);
-        enderecoRecuperado.setTipo(enderecoAtualizar.getTipo());
-        enderecoRecuperado.setLogradouro(enderecoAtualizar.getLogradouro());
-        enderecoRecuperado.setNumero(enderecoAtualizar.getNumero());
-        enderecoRecuperado.setComplemento(enderecoAtualizar.getComplemento());
-        enderecoRecuperado.setCep(enderecoAtualizar.getCep());
-        enderecoRecuperado.setCidade(enderecoAtualizar.getCidade());
-        enderecoRecuperado.setEstado(enderecoAtualizar.getEstado());
-        enderecoRecuperado.setPais(enderecoAtualizar.getPais());
-        return objectMapper.convertValue(enderecoRepository.update(idPessoa,enderecoRecuperado), EnderecoDTO.class);
+        EnderecoCreateDTO enderecoAtualizado = enderecoRepository.update(idPessoa, enderecoAtualizar);
+        return objectMapper.convertValue(enderecoAtualizado, EnderecoDTO.class);
     }
-
     public void delete(Integer id) throws Exception{
-        log.info("Deletando Endereço na camada Service.");
         Endereco enderecoRecuperado = getEndereco(id);
         enderecoRepository.delete(enderecoRecuperado);
     }

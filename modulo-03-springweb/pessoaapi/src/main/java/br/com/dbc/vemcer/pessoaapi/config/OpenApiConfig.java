@@ -6,10 +6,8 @@ import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 @Configuration
 public class OpenApiConfig {
-
     @Bean
     public OpenAPI springShopOpenAPI() {
         String securitySchemeName = "bearerAuth";

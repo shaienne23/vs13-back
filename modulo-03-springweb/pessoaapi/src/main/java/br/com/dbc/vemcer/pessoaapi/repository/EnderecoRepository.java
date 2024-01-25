@@ -1,9 +1,9 @@
 package br.com.dbc.vemcer.pessoaapi.repository;
 
+import br.com.dbc.vemcer.pessoaapi.dto.EnderecoCreateDTO;
 import br.com.dbc.vemcer.pessoaapi.entity.Endereco;
 import br.com.dbc.vemcer.pessoaapi.entity.TipoEndereco;
 import org.springframework.stereotype.Repository;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -13,9 +13,7 @@ import java.util.stream.Collectors;
 public class EnderecoRepository {
     private static List<Endereco> listaEnderecos;
     private static AtomicInteger COUNTER = new AtomicInteger();
-
     private final PessoaRepository pessoaRepository;
-
     public EnderecoRepository(PessoaRepository pessoaRepository){
         this.pessoaRepository = pessoaRepository;
         this.listaEnderecos = new ArrayList<>();
@@ -46,7 +44,6 @@ public class EnderecoRepository {
                    "Rua XYZ", 456, "Complemento XYZ", "87654321", "Cidade XYZ", "Estado XYZ", "Brasil"));
 
        }
-
     public static Endereco create(Endereco enderecoCriar) {
         enderecoCriar.setIdEndereco(COUNTER.incrementAndGet());
         enderecoCriar.setIdPessoa(enderecoCriar.getIdPessoa());
@@ -61,9 +58,7 @@ public class EnderecoRepository {
         listaEnderecos.add(enderecoCriar);
         return enderecoCriar;
     }
-
     public List<Endereco> list(){
-
         return listaEnderecos;
     }
     public List<Endereco> listByIdEndereco(Integer id) {
@@ -71,21 +66,18 @@ public class EnderecoRepository {
                 .filter(endereco -> endereco.getIdEndereco().equals(id))
                 .collect(Collectors.toList());
     }
-
     public List<Endereco> listByIdPessoa(Integer idPessoa) {
         return listaEnderecos.stream()
                 .filter(endereco -> endereco.getIdPessoa().equals(idPessoa))
                 .collect(Collectors.toList());
 
     }
-
     public List<Endereco> listByEstado(String estado) {
         return listaEnderecos.stream()
                 .filter(endereco -> endereco.getEstado().toUpperCase().contains(estado.toUpperCase()))
                 .collect(Collectors.toList());
     }
-
-    public Endereco update(Integer id, Endereco enderecoAtualizar) {
+    public EnderecoCreateDTO update(Integer id, EnderecoCreateDTO enderecoAtualizar) {
         enderecoAtualizar.setTipo(enderecoAtualizar.getTipo());
         enderecoAtualizar.setLogradouro(enderecoAtualizar.getLogradouro());
         enderecoAtualizar.setNumero(enderecoAtualizar.getNumero());
@@ -96,7 +88,6 @@ public class EnderecoRepository {
         enderecoAtualizar.setPais(enderecoAtualizar.getPais());
         return enderecoAtualizar;
     }
-
     public void delete(Endereco endereco) {
         listaEnderecos.remove(endereco);
     }

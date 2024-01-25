@@ -1,6 +1,7 @@
 package br.com.dbc.vemcer.pessoaapi.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.validator.constraints.br.CPF;
 
@@ -13,7 +14,6 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Data
-
 
 public class Pessoa {
     private Integer idPessoa;
@@ -28,5 +28,6 @@ public class Pessoa {
 
     @CPF(message = "CPF Invalido!")
     @Size(min = 11, max = 11, message = "O CPF deve conter 11 caracteres")
-    private String cpf;}
+    private String cpf;
+}
 

@@ -13,10 +13,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 import java.util.List;
-
 @RequiredArgsConstructor
 @RestController
 @Validated
@@ -26,9 +24,7 @@ import java.util.List;
 @RequestMapping("/endereco")
 public class EnderecoControler implements IEnderecoController {
     private final EnderecoService enderecoService;
-
-    private final PropertiesReader propertiesReader;
-    private final EmailService emailService;
+        private final EmailService emailService;
 
     @GetMapping
     public ResponseEntity<List<EnderecoDTO>> listAll() {
@@ -36,14 +32,12 @@ public class EnderecoControler implements IEnderecoController {
         List<EnderecoDTO> enderecosListados = enderecoService.list();
         return new ResponseEntity<>(enderecosListados, HttpStatus.OK);
     }
-
     @GetMapping("/{idEndereco}")
     public ResponseEntity<List<EnderecoDTO>>listByIdEndereco(@PathVariable("idEndereco") Integer id){
         log.info("Listando endereços por Id.");
         List<EnderecoDTO> enderecosListados = enderecoService.listByIdEndereco(id);
         return new ResponseEntity<>(enderecosListados, HttpStatus.OK);
     }
-
     @GetMapping("/{idPessoa}/pessoa")
     public ResponseEntity<List<EnderecoDTO>> listByIdPessoa(@PathVariable("idPessoa") Integer idPessoa){
         log.info("Listando endereços por idPessoa.");
@@ -56,7 +50,6 @@ public class EnderecoControler implements IEnderecoController {
         List<EnderecoDTO> enderecoPorEstado = enderecoService.listByEstado(estado);
         return new ResponseEntity<>(enderecoPorEstado, HttpStatus.OK);
     }
-
     @PostMapping("/{idPessoa}")
     public ResponseEntity<EnderecoDTO> create(@PathVariable("idPessoa") Integer idPessoa,
                                               @Valid @RequestBody EnderecoCreateDTO endereco) throws Exception {

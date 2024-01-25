@@ -5,15 +5,14 @@ import br.com.dbc.vemcer.pessoaapi.dto.PessoaDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 import java.util.List;
-
+@Tag(name = "Dados Pessoa", description = "Endpoint de Dados de Pessoas")
 public interface IPessoaController {
     @Operation(summary = "Listar pessoas", description = "Lista todas as pessoas do banco")
-
     @ApiResponses(
             value = {
                     @ApiResponse(responseCode = "200", description = "Retorna a lista de pessoas"),
@@ -23,9 +22,7 @@ public interface IPessoaController {
     )
     @GetMapping
     public ResponseEntity<List<PessoaDTO>> list();
-
     @Operation(summary = "Listar pessoas com filtro nome", description = "Lista as pessoas com nome filtrado no banco")
-
     @ApiResponses(
             value = {
                     @ApiResponse(responseCode = "200", description = "Retorna a lista de pessoas"),
@@ -35,9 +32,7 @@ public interface IPessoaController {
     )
     @GetMapping ("/byname")
     public ResponseEntity<List<PessoaDTO>>listByName(@RequestParam("nome") String nome);
-
     @Operation(summary = "Criar Pessoa", description = "Cria Cadastro nova pessoa.")
-
     @ApiResponses(
             value = {
                     @ApiResponse(responseCode = "200", description = "Retorna Pessoa Cadastrada."),
@@ -47,7 +42,6 @@ public interface IPessoaController {
     )
     @PostMapping
     public ResponseEntity<PessoaDTO> create(@Valid @RequestBody PessoaCreateDTO pessoa) throws Exception;
-
     @Operation(summary = "Altera Pessoa", description = "Altera Cadastro de pessoa por id.")
 
     @ApiResponses(
@@ -61,7 +55,6 @@ public interface IPessoaController {
     public ResponseEntity<PessoaDTO> update( @PathVariable("idPessoa") Integer id,
                                              @Valid @RequestBody PessoaCreateDTO pessoaAtualizar) throws Exception;
     @Operation(summary = "Deleta Pessoa", description = "Deleta Cadastro de pessoa por id.")
-
     @ApiResponses(
             value = {
                     @ApiResponse(responseCode = "200", description = "Sem retorno, porem pessoa Deletada."),
@@ -71,9 +64,7 @@ public interface IPessoaController {
     )
     @DeleteMapping("/{idPessoa}")
     public ResponseEntity<Void> delete (@PathVariable("idPessoa") Integer id) throws Exception;
-
     @Operation(summary = "Envia E-mail Pessoa", description = "Envia email para pessoa.")
-
     @ApiResponses(
             value = {
                     @ApiResponse(responseCode = "200", description = "E-mail enviado."),
@@ -92,7 +83,6 @@ public interface IPessoaController {
                     @ApiResponse(responseCode = "500", description = "Foi gerada uma exceção")
             }
     )
-
     @GetMapping("/ambiente")
     public String getAmbiente();
 }

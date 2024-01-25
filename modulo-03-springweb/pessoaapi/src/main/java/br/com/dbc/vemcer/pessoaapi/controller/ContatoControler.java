@@ -10,7 +10,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 import java.util.List;
 
@@ -29,14 +28,12 @@ public class ContatoControler implements IContatoController {
         List<ContatoDTO> contatosListados = contatoService.list();
         return new ResponseEntity<>(contatosListados, HttpStatus.OK);
     }
-
     @GetMapping ("/byname")
     public ResponseEntity<List<ContatoDTO>> listByName(@RequestParam("descricao") String descricao){
         log.info("Listando Contato ByName");
         List<ContatoDTO> contatosListadoName = contatoService.listByName(descricao);
         return new ResponseEntity<>(contatosListadoName, HttpStatus.OK);
     }
-
     @PostMapping
     public ResponseEntity<ContatoDTO>create(@Valid @RequestBody ContatoCreateDTO contato)throws Exception{
         log.info("Criando Contato. ");
@@ -44,7 +41,6 @@ public class ContatoControler implements IContatoController {
         log.info("Contato Criado!");
         return new ResponseEntity<>(contatoDTO, HttpStatus.OK);
     }
-
     @PutMapping("/{idContato}")
     public ResponseEntity<ContatoDTO>update( @PathVariable("idContato") Integer id,
                           @Valid @RequestBody ContatoCreateDTO contatoAtualizar) throws Exception{
@@ -60,6 +56,4 @@ public class ContatoControler implements IContatoController {
         log.info("Contato Deletado!");
         return ResponseEntity.ok().build();
     }
-
-
 }

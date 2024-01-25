@@ -1,8 +1,5 @@
 package br.com.dbc.vemcer.pessoaapi.service;
 
-import br.com.dbc.vemcer.pessoaapi.dto.PessoaDTO;
-import br.com.dbc.vemcer.pessoaapi.entity.Pessoa;
-import freemarker.core.Environment;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import lombok.RequiredArgsConstructor;
@@ -24,20 +21,15 @@ import java.util.Map;
 @Component
 @RequiredArgsConstructor
 public class EmailService {
-
     private final freemarker.template.Configuration fmConfiguration;
-
     @Value("${spring.mail.username}")
     private String email;
-
     @Value("${usuario}")
     private String usuario;
     @Value("${spring.mail.username}")
     private String from;
     private String to = "shaienne.oliveira@dbccompany.com.br";
-
     private final JavaMailSender emailSender;
-
     public void sendSimpleMessage() {
         SimpleMailMessage message = new SimpleMailMessage();
 
@@ -47,7 +39,6 @@ public class EmailService {
         message.setText("Meu e-mail Chegou!");
         emailSender.send(message);
     }
-
     public void sendWithAttachment() throws Exception {
         MimeMessage message = emailSender.createMimeMessage();
 
@@ -58,7 +49,6 @@ public class EmailService {
         } catch (MessagingException e) {
             throw new Exception(e.getMessage());
         }
-
         mimeMessageHelper.setFrom(from);
         mimeMessageHelper.setTo(to);
         mimeMessageHelper.setSubject("Assunto 1");
@@ -78,7 +68,6 @@ public class EmailService {
 
         emailSender.send(message);
     }
-
     public void sendEmail(String content) throws Exception {
         MimeMessage mimeMessage = emailSender.createMimeMessage();
         try {
@@ -114,7 +103,6 @@ public class EmailService {
             default:
                 throw new IllegalArgumentException("Ação desconhecida: " + acao);
         }
-
         Map<String, Object> dados = new HashMap<>();
         dados.put("nome", usuario);
         dados.put("email", email);
@@ -122,11 +110,8 @@ public class EmailService {
         if ("PESSOA".equalsIgnoreCase(entidade) && id != null) {
             dados.put("id", id);
         }
-
         Template template = fmConfiguration.getTemplate(templateName);
         String html = FreeMarkerTemplateUtils.processTemplateIntoString(template, dados);
         return html;
     }
-
-
 }
