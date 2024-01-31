@@ -1,6 +1,5 @@
 package br.com.dbc.vemcer.pessoaapi.repository;
 
-import br.com.dbc.vemcer.pessoaapi.dto.EnderecoDTO;
 import br.com.dbc.vemcer.pessoaapi.entity.Endereco;
 import org.springframework.data.jpa.repository.JpaRepository;
 

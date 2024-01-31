@@ -1,5 +1,6 @@
 package br.com.dbc.vemcer.pessoaapi.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.hibernate.validator.constraints.br.CPF;
 
@@ -9,10 +10,12 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import java.time.LocalDate;
+import java.util.Set;
 
 @AllArgsConstructor
 @RequiredArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity(name = "PESSOA")
 public class Pessoa {
     @Id
@@ -35,4 +38,15 @@ public class Pessoa {
     @Size(min = 11, max = 11, message = "O CPF deve conter 11 caracteres")
     @Column(name = "cpf")
     private String cpf;
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "Pessoa_X_Pessoa_Endereco",
+            joinColumns = @JoinColumn(name = "id_pessoa"),
+            inverseJoinColumns = @JoinColumn(name = "id_endereco")
+    )
+    private Set<Endereco> enderecos;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "pessoaEntity", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Contato> contatos;
 }

@@ -1,8 +1,7 @@
 package br.com.dbc.vemcer.pessoaapi.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
@@ -11,7 +10,8 @@ import javax.validation.constraints.Size;
 
 @AllArgsConstructor
 @RequiredArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity(name = "CONTATO")
 public class Contato {
     @Id
@@ -20,11 +20,13 @@ public class Contato {
     @Column(name = "id_contato")
     private Integer idContato;
 
-    private Integer idPessoa;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_pessoa", referencedColumnName = "id_pessoa")
+    private Pessoa pessoaEntity;
 
     @NotNull(message = "Tipo de Contato não pode ser nulo")
+    @Enumerated(EnumType.ORDINAL)
     @Column(name = "tipo")
-    @Convert(converter = TipoContatoConverter.class)
     private TipoContato tipoContato;
 
     @Size(max = 13, message = "O numero deve ter no máximo 13 caracteres")

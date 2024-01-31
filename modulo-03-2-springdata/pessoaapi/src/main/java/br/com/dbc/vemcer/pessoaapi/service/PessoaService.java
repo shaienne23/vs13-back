@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -33,8 +35,20 @@ private final String NOT_FOUND_MESSAGE = "ID da pessoa nao encontrada";
                 .map(this::retornarDTO)
                 .collect(Collectors.toList());
     }
-    public List<PessoaDTO> findAllByNomeContains(String nome) {
-        return pessoaRepository.findAllByNomeContains(nome).stream()
+    public List<PessoaDTO> findByNomeContainingIgnoreCase(String nome) {
+        return pessoaRepository.findByNomeContainingIgnoreCase(nome).stream()
+                .map(this::retornarDTO)
+                .collect(Collectors.toList());
+    }
+
+    public List<PessoaDTO>findByCpf(String cpf) {
+        return pessoaRepository.findByCpf(cpf).stream()
+                .map(this::retornarDTO)
+                .collect(Collectors.toList());
+    }
+    public List<PessoaDTO> findByDataNascimentoBetween(LocalDate dataInicial, LocalDate dataFinal) {
+        List<Pessoa> pessoasEncontradas = pessoaRepository.findByDataNascimentoBetween(dataInicial, dataFinal);
+        return pessoasEncontradas.stream()
                 .map(this::retornarDTO)
                 .collect(Collectors.toList());
     }

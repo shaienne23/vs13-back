@@ -1,11 +1,13 @@
 package br.com.dbc.vemcer.pessoaapi.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.Set;
 
 @AllArgsConstructor
 @RequiredArgsConstructor
@@ -15,14 +17,13 @@ import javax.validation.constraints.Size;
 public class Endereco {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ENDERECO_SEQ")
-    @SequenceGenerator(name = "ENDERECO_SEQ", sequenceName = "seq_endereco", allocationSize = 1)
-//    @Column(name = "id_endereco")
+    @SequenceGenerator(name = "ENDERECO_SEQ", sequenceName = "seq_endereco_contato", allocationSize = 1)
+    @Column(name = "id_endereco")
     private Integer idEndereco;
-    private Integer idPessoa;
 
     @NotNull(message = "O Tipo de endereço não pode ser Nulo!")
+    @Enumerated(EnumType.ORDINAL)
     @Column(name = "tipo")
-    @Convert(converter = TipoEnderecoConverter.class)
     private TipoEndereco tipo;
 
     @Size(max = 250, message = "O Logradouro deve ter no máximo 250 caracteres")
@@ -54,4 +55,9 @@ public class Endereco {
     @NotNull(message = "País não pode ser Nulo!")
     @Column(name = "pais")
     private String pais;
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "enderecos")
+    private Set<Pessoa> pessoas;
+
 }
