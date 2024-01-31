@@ -24,7 +24,7 @@ public interface IEnderecoController {
             }
     )
     @GetMapping
-    public ResponseEntity<List<EnderecoDTO>> listAll();
+    public ResponseEntity<List<EnderecoDTO>> list() ;
     @Operation(summary = "Listar Endereço por id", description = "Lista por id do endereço")
     @ApiResponses(
             value = {

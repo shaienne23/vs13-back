@@ -3,7 +3,7 @@ package br.com.dbc.vemcer.pessoaapi.service;
 
 import br.com.dbc.vemcer.pessoaapi.dto.PessoaCreateDTO;
 import br.com.dbc.vemcer.pessoaapi.dto.PessoaDTO;
-import br.com.dbc.vemcer.pessoaapi.entity.PessoaEntity;
+import br.com.dbc.vemcer.pessoaapi.entity.Pessoa;
 import br.com.dbc.vemcer.pessoaapi.exceptions.EntidadeNaoEncontradaException;
 import br.com.dbc.vemcer.pessoaapi.exceptions.RegraDeNegocioException;
 import br.com.dbc.vemcer.pessoaapi.repository.PessoaRepository;
@@ -23,7 +23,7 @@ private final ObjectMapper objectMapper;
 
 private final String NOT_FOUND_MESSAGE = "ID da pessoa nao encontrada";
 
-    public PessoaEntity returnPersonById(Integer id) throws EntidadeNaoEncontradaException {
+    public Pessoa returnPersonById(Integer id) throws EntidadeNaoEncontradaException {
         return pessoaRepository.findById(id)
                 .orElseThrow(() -> new EntidadeNaoEncontradaException(NOT_FOUND_MESSAGE));
     }
@@ -39,12 +39,12 @@ private final String NOT_FOUND_MESSAGE = "ID da pessoa nao encontrada";
                 .collect(Collectors.toList());
     }
     public PessoaDTO create(PessoaCreateDTO pessoa) {
-        PessoaEntity pessoaEntity = converterDTO(pessoa);
+        Pessoa pessoaEntity = converterDTO(pessoa);
         return retornarDTO(pessoaRepository.save(pessoaEntity));
     }
 
     public PessoaDTO update(Integer id, PessoaCreateDTO pessoaDto) throws RegraDeNegocioException, EntidadeNaoEncontradaException {
-        PessoaEntity pessoaEntityRecuperada = returnPersonById(id);
+        Pessoa pessoaEntityRecuperada = returnPersonById(id);
 
         pessoaEntityRecuperada.setCpf(pessoaDto.getCpf());
         pessoaEntityRecuperada.setDataNascimento(pessoaDto.getDataNascimento());
@@ -55,16 +55,16 @@ private final String NOT_FOUND_MESSAGE = "ID da pessoa nao encontrada";
 
     public void delete(Integer id) {
         try {
-            PessoaEntity pessoaEntityRecuperada = returnPersonById(id);
+            Pessoa pessoaEntityRecuperada = returnPersonById(id);
             pessoaRepository.delete(pessoaEntityRecuperada);
         } catch (EntidadeNaoEncontradaException ex){
             ex.printStackTrace();
         }
     }
-    public PessoaEntity converterDTO(PessoaCreateDTO dto) {
-        return objectMapper.convertValue(dto, PessoaEntity.class);
+    public Pessoa converterDTO(PessoaCreateDTO dto) {
+        return objectMapper.convertValue(dto, Pessoa.class);
     }
-    public PessoaDTO retornarDTO(PessoaEntity entity) {
+    public PessoaDTO retornarDTO(Pessoa entity) {
         return objectMapper.convertValue(entity, PessoaDTO.class);
     }
 }

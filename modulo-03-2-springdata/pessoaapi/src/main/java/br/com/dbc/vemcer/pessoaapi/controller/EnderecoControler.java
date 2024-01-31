@@ -27,7 +27,7 @@ public class EnderecoControler implements IEnderecoController {
         private final EmailService emailService;
 
     @GetMapping
-    public ResponseEntity<List<EnderecoDTO>> listAll() {
+    public ResponseEntity<List<EnderecoDTO>> list() {
         log.info("Listando Endereço.");
         List<EnderecoDTO> enderecosListados = enderecoService.list();
         return new ResponseEntity<>(enderecosListados, HttpStatus.OK);

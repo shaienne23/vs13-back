@@ -28,7 +28,7 @@ public class EnderecoService {
                 .collect(Collectors.toList());
     }
     public List<EnderecoDTO> findAllByEstadoContains(String estado){
-        List<EnderecoEntity> enderecos = enderecoRepository.findAllByEstadoContains(estado);
+        List<Endereco> enderecos = enderecoRepository.findAllByEstadoContains(estado);
 
         return enderecos.stream()
                 .map(this::retornarDTO)
@@ -36,7 +36,7 @@ public class EnderecoService {
     }
 
     public List<EnderecoDTO> listByIdEndereco(Integer id) {
-        List<EnderecoEntity> enderecos = enderecoRepository.findAllByIdEnderecoContains(id);
+        List<Endereco> enderecos = enderecoRepository.findAllByIdEnderecoContains(id);
         return enderecos.stream()
                 .map(this::retornarDTO)
                 .collect(Collectors.toList());
@@ -50,12 +50,12 @@ public class EnderecoService {
 //    } verificar como puxar o id de pessoa
 
     public EnderecoDTO create(EnderecoCreateDTO endereco) {
-        EnderecoEntity enderecoEntity = converterDTO(endereco);
+        Endereco enderecoEntity = converterDTO(endereco);
         return retornarDTO(enderecoRepository.save(enderecoEntity));
     }
 
     public EnderecoDTO update(Integer id, EnderecoCreateDTO enderecoDto) throws RegraDeNegocioException, EntidadeNaoEncontradaException {
-        EnderecoEntity enderecoEntityRecuperada = returnEnderecoById(id);
+        Endereco enderecoEntityRecuperada = returnEnderecoById(id);
 
         enderecoEntityRecuperada.setCep(enderecoDto.getCep());
         enderecoEntityRecuperada.setNumero(enderecoDto.getNumero());
@@ -71,20 +71,20 @@ public class EnderecoService {
 
     public void delete(Integer id) {
         try {
-            EnderecoEntity enderecoEntityRecuperada = returnEnderecoById(id);
+            Endereco enderecoEntityRecuperada = returnEnderecoById(id);
             enderecoRepository.delete(enderecoEntityRecuperada);
         } catch (EntidadeNaoEncontradaException ex){
             ex.printStackTrace();
         }
     }
-    public EnderecoEntity returnEnderecoById(Integer id) throws EntidadeNaoEncontradaException {
+    public Endereco returnEnderecoById(Integer id) throws EntidadeNaoEncontradaException {
         return enderecoRepository.findById(id)
                 .orElseThrow(() -> new EntidadeNaoEncontradaException(NOT_FOUND_MESSAGE));
     }
-    public EnderecoEntity converterDTO(EnderecoCreateDTO dto) {
-        return objectMapper.convertValue(dto, EnderecoEntity.class);
+    public Endereco converterDTO(EnderecoCreateDTO dto) {
+        return objectMapper.convertValue(dto, Endereco.class);
     }
-    public EnderecoDTO retornarDTO(EnderecoEntity entity) {
+    public EnderecoDTO retornarDTO(Endereco entity) {
         return objectMapper.convertValue(entity, EnderecoDTO.class);
     }
 }
