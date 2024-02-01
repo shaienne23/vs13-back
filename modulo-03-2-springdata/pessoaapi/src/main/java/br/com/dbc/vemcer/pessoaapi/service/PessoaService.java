@@ -75,10 +75,28 @@ private final String NOT_FOUND_MESSAGE = "ID da pessoa nao encontrada";
             ex.printStackTrace();
         }
     }
+
+//    optional
+//    public Optional<List<PessoaEnderecoDto>> listWithAddress(Integer idPessoa) {
+//        return Optional.ofNullable(idPessoa)
+//                .flatMap(pessoaRepository::findById)
+//                .map(pessoaEntity -> {
+//                    PessoaEnderecoDto pessoaEnderecoDto = objectMapper.convertValue(pessoaEntity, PessoaEnderecoDto.class);
+//                    pessoaEnderecoDto.setEnderecos(pessoaEntity.getEnderecos());
+//                    return Collections.singletonList(pessoaEnderecoDto);
+//                })
+//                .or(() -> Optional.of(
+//                        pessoaRepository.findAll().stream()
+//                                .map(pessoaEntity -> objectMapper.convertValue(pessoaEntity, PessoaEnderecoDto.class))
+//                                .collect(Collectors.toList())
+//                ));
+//    }
     public Pessoa converterDTO(PessoaCreateDTO dto) {
         return objectMapper.convertValue(dto, Pessoa.class);
     }
     public PessoaDTO retornarDTO(Pessoa entity) {
         return objectMapper.convertValue(entity, PessoaDTO.class);
     }
+
+
 }

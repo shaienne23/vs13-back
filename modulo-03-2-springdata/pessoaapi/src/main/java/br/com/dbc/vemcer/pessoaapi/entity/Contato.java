@@ -1,5 +1,6 @@
 package br.com.dbc.vemcer.pessoaapi.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -20,21 +21,21 @@ public class Contato {
     @Column(name = "id_contato")
     private Integer idContato;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_pessoa", referencedColumnName = "id_pessoa")
-    private Pessoa pessoaEntity;
+    @Column(name = "id_pessoa", updatable = false, insertable = false)
+    private Integer idPessoa;
 
-    @NotNull(message = "Tipo de Contato não pode ser nulo")
     @Enumerated(EnumType.ORDINAL)
     @Column(name = "tipo")
     private TipoContato tipoContato;
 
-    @Size(max = 13, message = "O numero deve ter no máximo 13 caracteres")
-    @NotBlank(message = "Campo numero não pode ser nulo")
     @Column(name = "numero")
     private String numero;
 
-    @NotEmpty(message = "Descrição não pode estar vazia ou nula!")
     @Column(name = "descricao")
     private String descricao;
+
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_pessoa", referencedColumnName = "id_pessoa")
+    private Pessoa pessoa;
 }

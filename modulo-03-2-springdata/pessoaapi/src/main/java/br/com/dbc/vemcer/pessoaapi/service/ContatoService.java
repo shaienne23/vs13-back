@@ -12,6 +12,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,7 +25,17 @@ import java.util.stream.Collectors;
     private final ObjectMapper objectMapper;
         private static final Logger logger = LoggerFactory.getLogger(ContatoService.class);
     private final String NOT_FOUND_MESSAGE = "ID de contato nao encontrado";
-
+//        public List<ContatoDTO> list() {
+//            List<Contato> contatos = contatoRepository.findAll();
+//            List<ContatoDTO> contatoDTOs = new ArrayList<>();
+//
+//            for (Contato contato : contatos) {
+//                ContatoDTO contatoDTO = retornarDTO(contato);
+//                contatoDTOs.add(contatoDTO);
+//            }
+//
+//            return contatoDTOs;
+//        }
         public List<ContatoDTO> list() {
             return contatoRepository.findAll().stream()
                     .map(this::retornarDTO)

@@ -1,18 +1,26 @@
 package br.com.dbc.vemcer.pessoaapi.dto;
 
+import br.com.dbc.vemcer.pessoaapi.entity.Contato;
+import br.com.dbc.vemcer.pessoaapi.entity.Endereco;
+import br.com.dbc.vemcer.pessoaapi.entity.Pet;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDate;
+import java.util.Set;
 
-@Data
+@AllArgsConstructor
+@RequiredArgsConstructor
+@Getter
+@Setter
 
 public class PessoaDTO {
     private Integer idPessoa;
-    @Schema(description = "Nome da Pessoa", required = true, example = "Shaienne")
     private String nome;
-    @Schema(description = "Data de Nascimento", required = true, example = "1991-05-28")
     private LocalDate dataNascimento;
-    @Schema(description = "Cpf Pessoa", required = true, example = "12387645603")
     private String cpf;
+//    private Pet pets;
+    private Set<Pet> pets;
+    private Set<Contato> contatos;
+    private Set<Endereco> enderecos;
 }

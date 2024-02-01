@@ -21,38 +21,40 @@ public class Endereco {
     @Column(name = "id_endereco")
     private Integer idEndereco;
 
-    @NotNull(message = "O Tipo de endereço não pode ser Nulo!")
+//    @Column(name = "id_pessoa", updatable = false, insertable = false)
+//    private Integer idPessoa;
+    //verificar se codigos abaixo quebram a aplicação.quebraram sim
+//    @Column(name = "id_pessoa",insertable = false, updatable = false)
+    //@Column(name = "id_pessoa", updatable = false, insertable = false)
+//    private Integer idPessoa;
+
+//    @JsonIgnore
+//    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+//    @JoinColumn(name = "id_pessoa", referencedColumnName = "id_pessoa")
+//    private Pessoa pessoa;
+
     @Enumerated(EnumType.ORDINAL)
     @Column(name = "tipo")
     private TipoEndereco tipo;
 
-    @Size(max = 250, message = "O Logradouro deve ter no máximo 250 caracteres")
-    @NotEmpty(message = "Logradouro não pode estar vazio ou nulo!")
     @Column(name = "logradouro")
     private String logradouro;
 
-    @NotNull(message = "O número não pode ser Nulo!")
     @Column(name = "numero")
     private Integer numero;
 
     @Column(name = "complemento")
     private String complemento;
 
-    @NotEmpty(message = "Campo CEP não pode ser vazio ou nulo")
-    @Size(max = 8, message = "O CEP deve conter no máximo 8 caracteres")
     @Column(name = "cep")
     private String cep;
 
-    @Size(max = 250, message = "A cidade deve ter no máximo 250 caracteres")
-    @NotEmpty(message = "Cidade não pode ser vazio ou nulo!")
     @Column(name = "cidade")
     private String cidade;
 
-    @NotNull(message = "Estado não pode ser Nulo!")
     @Column(name = "estado")
     private String estado;
 
-    @NotNull(message = "País não pode ser Nulo!")
     @Column(name = "pais")
     private String pais;
 

@@ -1,7 +1,7 @@
 package br.com.dbc.vemcer.pessoaapi.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Data;
+import lombok.*;
 import org.hibernate.validator.constraints.br.CPF;
 
 import javax.validation.constraints.NotBlank;
@@ -10,7 +10,10 @@ import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import java.time.LocalDate;
 
-@Data
+@AllArgsConstructor
+@RequiredArgsConstructor
+@Getter
+@Setter
 public class PessoaCreateDTO {
 
         private Integer idPessoa;
