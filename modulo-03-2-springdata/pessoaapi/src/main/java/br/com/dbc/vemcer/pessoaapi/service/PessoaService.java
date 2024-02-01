@@ -1,8 +1,11 @@
 package br.com.dbc.vemcer.pessoaapi.service;
 
 
+import br.com.dbc.vemcer.pessoaapi.dto.PessoaCompletaDTO;
 import br.com.dbc.vemcer.pessoaapi.dto.PessoaCreateDTO;
 import br.com.dbc.vemcer.pessoaapi.dto.PessoaDTO;
+import br.com.dbc.vemcer.pessoaapi.entity.Contato;
+import br.com.dbc.vemcer.pessoaapi.entity.Endereco;
 import br.com.dbc.vemcer.pessoaapi.entity.Pessoa;
 import br.com.dbc.vemcer.pessoaapi.exceptions.EntidadeNaoEncontradaException;
 import br.com.dbc.vemcer.pessoaapi.exceptions.RegraDeNegocioException;
@@ -87,16 +90,23 @@ private final String NOT_FOUND_MESSAGE = "ID da pessoa nao encontrada";
 //                })
 //                .or(() -> Optional.of(
 //                        pessoaRepository.findAll().stream()
-//                                .map(pessoaEntity -> objectMapper.convertValue(pessoaEntity, PessoaEnderecoDto.class))
-//                                .collect(Collectors.toList())
+//                               List .map(pessoaEntity -> objectMapper.convertValue(pessoaEntity, PessoaEnderecoDto.class))
+////                                .collect(Collectors.to())
 //                ));
 //    }
+    public List<PessoaCompletaDTO> getPessoaCompleto(Integer idPessoa) {
+        List<Pessoa> resultados = pessoaRepository.findPessoaCompleta(idPessoa);
+
+        return resultados.stream()
+                .map(result -> objectMapper.convertValue(result, PessoaCompletaDTO.class))
+                .collect(Collectors.toList());
+    }
+
     public Pessoa converterDTO(PessoaCreateDTO dto) {
         return objectMapper.convertValue(dto, Pessoa.class);
     }
     public PessoaDTO retornarDTO(Pessoa entity) {
         return objectMapper.convertValue(entity, PessoaDTO.class);
     }
-
 
 }

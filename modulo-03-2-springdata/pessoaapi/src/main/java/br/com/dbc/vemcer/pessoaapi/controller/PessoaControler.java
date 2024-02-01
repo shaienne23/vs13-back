@@ -2,8 +2,11 @@ package br.com.dbc.vemcer.pessoaapi.controller;
 
 import br.com.dbc.vemcer.pessoaapi.config.PropertiesReader;
 import br.com.dbc.vemcer.pessoaapi.controller.interfaces.IPessoaController;
+import br.com.dbc.vemcer.pessoaapi.dto.EnderecoDTO;
+import br.com.dbc.vemcer.pessoaapi.dto.PessoaCompletaDTO;
 import br.com.dbc.vemcer.pessoaapi.dto.PessoaCreateDTO;
 import br.com.dbc.vemcer.pessoaapi.dto.PessoaDTO;
+import br.com.dbc.vemcer.pessoaapi.entity.Pessoa;
 import br.com.dbc.vemcer.pessoaapi.service.EmailService;
 import br.com.dbc.vemcer.pessoaapi.service.PessoaService;
 import lombok.RequiredArgsConstructor;
@@ -125,5 +128,14 @@ public class PessoaControler implements IPessoaController {
 
         log.info("E-mail enviado!");
         return "E-mail enviado pela " + app + "!";
+    }
 
-}}
+        @GetMapping("/completo")
+        public ResponseEntity<List<PessoaCompletaDTO>> getPessoaCompleto(@RequestParam(name = "id", required = false) Integer idPessoa) {
+            log.info("Listando Pessoa Completa");
+            List<PessoaCompletaDTO> pessoasListadas = pessoaService.getPessoaCompleto( idPessoa);
+            log.info("Pessoa Completa listada com sucesso");
+            return new ResponseEntity<>(pessoasListadas, HttpStatus.OK);
+        }
+
+    }

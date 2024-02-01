@@ -4,10 +4,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import org.hibernate.validator.constraints.br.CPF;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
-import javax.validation.constraints.Size;
+import javax.persistence.Column;
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 
 @AllArgsConstructor
@@ -31,7 +29,11 @@ public class PessoaCreateDTO {
         @CPF(message = "CPF Invalido!")
         @Size(min = 11, max = 11, message = "O CPF deve conter 11 caracteres")
         @Schema(description = "Cpf Pessoa", required = true, example = "12387645603")
+
         private String cpf;
+        @Schema(description = "Email Pessoa", required = true, example = "fulano@mail.com")
+        @Email
+        private String email;
 
 }
 

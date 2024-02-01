@@ -2,7 +2,6 @@ package br.com.dbc.vemcer.pessoaapi.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
-import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -28,6 +27,9 @@ public class Pessoa {
 
     @Column(name = "cpf")
     private String cpf;
+
+    @Column(name = "email")
+    private String email;
     //@JsonIgnore
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "Pessoa_X_Pessoa_Endereco",
