@@ -1,8 +1,10 @@
 package br.com.dbc.vemcer.pessoaapi.service;
 
 import br.com.dbc.vemcer.pessoaapi.entity.UsuarioEntity;
+import br.com.dbc.vemcer.pessoaapi.exceptions.RegraDeNegocioException;
 import br.com.dbc.vemcer.pessoaapi.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -35,5 +37,16 @@ public class UsuarioService {
         novoUsuario.setSenha(senhaEncriptada);
         return usuarioRepository.save(novoUsuario);
     }
+
+    public Optional<UsuarioEntity> getLoggedUser() throws RegraDeNegocioException{
+        return findById(getIdLoggedUser());
+    }
+
+    public Integer getIdLoggedUser() {
+        Integer findUserId = Integer.parseInt(SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString());
+        return findUserId;
+    }
+
+
 }
 

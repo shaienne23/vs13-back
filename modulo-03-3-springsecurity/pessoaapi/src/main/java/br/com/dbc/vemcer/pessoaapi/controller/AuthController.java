@@ -8,12 +8,10 @@ import br.com.dbc.vemcer.pessoaapi.exceptions.RegraDeNegocioException;
 import br.com.dbc.vemcer.pessoaapi.security.TokenService;
 import br.com.dbc.vemcer.pessoaapi.service.UsuarioService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.Optional;
@@ -45,4 +43,10 @@ public class AuthController {
         UsuarioEntity usuarioCadastrado = usuarioService.save(novoUsuario);
 
         return ResponseEntity.ok(usuarioCadastrado);
-    }}
+    }
+    @GetMapping("/usuario-logado")
+    public ResponseEntity<Optional<UsuarioEntity>>usuarioLogado()throws RegraDeNegocioException{
+        return new ResponseEntity<>(usuarioService.getLoggedUser(), HttpStatus.OK);
+    }
+
+}
