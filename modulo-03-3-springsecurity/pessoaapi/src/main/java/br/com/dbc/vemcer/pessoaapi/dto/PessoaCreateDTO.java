@@ -29,8 +29,8 @@ public class PessoaCreateDTO {
         @CPF(message = "CPF Invalido!")
         @Size(min = 11, max = 11, message = "O CPF deve conter 11 caracteres")
         @Schema(description = "Cpf Pessoa", required = true, example = "12387645603")
-
         private String cpf;
+
         @Schema(description = "Email Pessoa", required = true, example = "fulano@mail.com")
         @Email
         private String email;
