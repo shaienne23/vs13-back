@@ -19,4 +19,6 @@ public class LoginCreateDTO {
     @NotNull
     @Size(max = 11)
     private String senha;
+
+
 }

@@ -17,8 +17,7 @@ import java.util.Collection;
 @RequiredArgsConstructor
 @Getter
 @Setter
-@Entity
-
+@Entity(name = "USUARIO")
 public class UsuarioEntity implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USUARIO_SEQUENCIA")

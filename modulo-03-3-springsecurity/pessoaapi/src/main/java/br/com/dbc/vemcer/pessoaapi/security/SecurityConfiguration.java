@@ -28,7 +28,10 @@ public class SecurityConfiguration {
                 .cors().and()
                 .csrf().disable()
                 .authorizeHttpRequests((authz) -> authz
-                        .antMatchers("/auth", "/cadastrar").permitAll()
+                        .antMatchers("/auth").permitAll()
+                        .antMatchers( "/auth/cadastrar").permitAll()
+
+
                         .anyRequest().authenticated()
                 );
         http.addFilterBefore(new TokenAuthenticationFilter(tokenService), UsernamePasswordAuthenticationFilter.class);

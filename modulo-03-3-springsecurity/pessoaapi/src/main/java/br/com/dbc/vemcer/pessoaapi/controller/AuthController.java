@@ -9,7 +9,6 @@ import br.com.dbc.vemcer.pessoaapi.security.TokenService;
 import br.com.dbc.vemcer.pessoaapi.service.UsuarioService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -37,10 +36,13 @@ public class AuthController {
             throw new RegraDeNegocioException("Usuário ou senha inválidos");
         }
     }
-
     @PostMapping("/cadastrar")
-    public ResponseEntity<Optional<UsuarioEntity>>cadastrarProfessor(@Valid @RequestBody LoginCreateDTO loginCreateDTO) throws Exception {
-        Optional<UsuarioEntity> loginRealizado = usuarioService.findByLogin(String.valueOf(loginCreateDTO));
-        return ResponseEntity.ok(loginRealizado);
+    public ResponseEntity<UsuarioEntity> cadastrar(@Valid @RequestBody LoginCreateDTO loginCreateDTO) throws Exception {
+        UsuarioEntity novoUsuario = new UsuarioEntity();
+        novoUsuario.setLogin(loginCreateDTO.getLogin());
+        novoUsuario.setSenha(loginCreateDTO.getSenha());
 
-}}
+        UsuarioEntity usuarioCadastrado = usuarioService.save(novoUsuario);
+
+        return ResponseEntity.ok(usuarioCadastrado);
+    }}
