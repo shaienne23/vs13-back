@@ -15,9 +15,15 @@ public class UsuarioService {
     private final PasswordEncoder passwordEncoder;
 
     public Optional<UsuarioEntity> findByLoginAndSenha(String login, String senha) {
-        return usuarioRepository.findByLoginAndSenha(login, senha);
+        Optional<UsuarioEntity> usuarioOptional = usuarioRepository.findByLogin(login);
+        if (usuarioOptional.isPresent()) {
+            UsuarioEntity usuario = usuarioOptional.get();
+            if (passwordEncoder.matches(senha, usuario.getSenha())) {
+                return usuarioOptional;
+            }
+        }
+        return Optional.empty();
     }
-
     public Optional<UsuarioEntity> findById(Integer idUsuario) {
         return usuarioRepository.findById(idUsuario);
     }
