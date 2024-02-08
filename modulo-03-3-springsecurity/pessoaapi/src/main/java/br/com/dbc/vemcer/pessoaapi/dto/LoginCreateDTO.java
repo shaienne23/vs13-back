@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.Set;
 
 @AllArgsConstructor
 @RequiredArgsConstructor
@@ -19,6 +20,8 @@ public class LoginCreateDTO {
     @NotNull
     @Size(max = 11)
     private String senha;
+    @NotNull
+    private Set<String> roles;
 
 
 }
