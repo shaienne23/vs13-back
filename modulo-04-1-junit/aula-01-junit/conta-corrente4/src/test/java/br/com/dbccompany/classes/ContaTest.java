@@ -120,6 +120,21 @@ class ContaTest {
     @Test
     @DisplayName("Deveria Testar transferencia em Conta Corrente sem saldo.")//não dar certo o valor do saque (saque > saldo)
     void testarTransferenciaSemSaldo(){
+        Cliente cliente1 = new Cliente();
+        ContaCorrente conta1 = new ContaCorrente(cliente1, 500);
+        conta1.setNumeroConta("7801");
+        conta1.setAgencia("66");
+        conta1.setSaldo(3000);
+
+        Cliente cliente2 = new Cliente();
+        ContaCorrente conta2 = new ContaCorrente(cliente2, 500);
+        conta2.setNumeroConta("7802");
+        conta2.setAgencia("67");
+        conta2.setSaldo(8000);
+
+        boolean saque = conta1.transferir(conta2, 10000.0);
+        System.out.println(saque);
+        Assertions.assertFalse(saque);
 
     }
     @Test
