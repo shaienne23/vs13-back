@@ -21,6 +21,9 @@ public class ContaPoupanca extends Conta implements ImpressaoInterface {
     public boolean sacar(double valor) {
         if (valor > 0 && getSaldo() - valor >= 0) {
             super.sacar(valor);
+            double novoSaldo = getSaldo() - valor;
+            setSaldo(novoSaldo);
+            System.out.println(getSaldo());
             System.out.println("Saque de R$" + valor + " realizado com sucesso.");
             return true;
         } else {

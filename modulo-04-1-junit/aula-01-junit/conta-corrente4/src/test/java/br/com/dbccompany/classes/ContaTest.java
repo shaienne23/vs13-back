@@ -21,7 +21,7 @@ class ContaTest {
     Assertions.assertEquals(saldoAtualizado, saldo);
 }
     @Test
-    @DisplayName("Deveria Testar Saque na Conta Corrente.")
+    @DisplayName("Deveria Testar Saque na Conta Corrente.")//não dar certo o valor do saque (saque > saldo + ce)
     void testarSaqueContaCorrenteSemSaldo() {
         Cliente cliente3 = new Cliente();
         ContaCorrente conta3 = new ContaCorrente(cliente3, 500);
@@ -31,39 +31,51 @@ class ContaTest {
 
         boolean saqueRealizado = conta3.sacar(9000);
         Assertions.assertFalse(saqueRealizado);
-    } //não dar certo o valor do saque (saque > saldo + ce)
+    }
     @Test
-    @DisplayName("Deveria Testar Saque  e verificar saldo na conta poupança.")
+    @DisplayName("Deveria Testar Saque  e verificar saldo na conta poupança.")//deve creditar taxa antes
     void testarSaqueContaPoupancaEVerificarSaldoComSucesso(){
+        double JUROS_MENSAL = 1.01;
         Cliente cliente = new Cliente();
-        ContaPoupanca contaPoupanca = new ContaPoupanca("123456", "001", 1000.0, cliente);
+        ContaPoupanca contaPoupanca = new ContaPoupanca(
+            "123456", "001", 1000.0, cliente);
+        contaPoupanca.creditarTaxa();
+        double saldoInicial = contaPoupanca.getSaldo();
 
-    } //deve creditar taxa antes
+        boolean saque = contaPoupanca.sacar(600);
+        Assertions.assertTrue(saque);
+
+        double novoSaldoEsperado = saldoInicial  - 600.0;
+        double saldoAtual = contaPoupanca.getSaldo();
+
+        Assertions.assertEquals(novoSaldoEsperado, saldoAtual);
+
+    }
     @Test
-    @DisplayName("Deveria Testar Saque na Conta Poupança.")
+    @DisplayName("Deveria Testar Saque na Conta Poupança.")//não dar certo o valor do saque (saque > saldo)
     void testarSaqueContaPoupancaSemSaldo(){
 
-    }//não dar certo o valor do saque (saque > saldo)
+    }
     @Test
     @DisplayName("Deveria Testar Saque e verificar saldo na Contade pagamento.")
     void testarSaqueContaPagamentoEVerificarSaldoComSucesso(){
 
     }
     @Test
-    @DisplayName("Deveria Testar Saque na Conta de Pagamento.")
+    @DisplayName("Deveria Testar Saque na Conta de Pagamento.") //não dar certo o valor do saque (saque > saldo)
     void testarSaqueContaPagamentoSemSaldo(){
 
-    } //não dar certo o valor do saque (saque > saldo)
+    }
     @Test
     @DisplayName("Deveria Testar Transferencia e verificar saldo na Conta Corrente.")
     void testarTransferenciaEVerificarSaldoComSucesso(){
 
     }
     @Test
-    @DisplayName("Deveria Testar transferencia em Conta Corrente sem saldo.")
+    @DisplayName("Deveria Testar transferencia em Conta Corrente sem saldo.")//não dar certo o valor do saque (saque > saldo)
     void testarTransferenciaSemSaldo(){
 
-    } //não dar certo o valor do saque (saque > saldo)
+    }
     @Test
     @DisplayName("Deveria Testar Deposito e verificar saldo na Conta Corrente.")
     void testarDepositoEVerificarSaldoComSucesso(){
