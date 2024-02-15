@@ -84,12 +84,38 @@ class ContaTest {
     @Test
     @DisplayName("Deveria Testar Saque na Conta de Pagamento.") //não dar certo o valor do saque (saque > saldo)
     void testarSaqueContaPagamentoSemSaldo(){
+        Cliente cliente1 = new Cliente();
+        ContaPagamento contaPagamento = new ContaPagamento(cliente1, 1000);
+        contaPagamento.setNumeroConta("5678");
+        contaPagamento.setAgencia("99");
+        contaPagamento.setSaldo(2000);
 
+        double saldoInicial = contaPagamento.getSaldo();
+
+        boolean saque = contaPagamento.sacar(600);
+        Assertions.assertTrue(saque);
     }
     @Test
     @DisplayName("Deveria Testar Transferencia e verificar saldo na Conta Corrente.")
     void testarTransferenciaEVerificarSaldoComSucesso(){
+        Cliente cliente1 = new Cliente();
+        ContaCorrente conta1 = new ContaCorrente(cliente1, 500);
+        conta1.setNumeroConta("7801");
+        conta1.setAgencia("66");
+        conta1.setSaldo(3000);
 
+        Cliente cliente2 = new Cliente();
+        ContaCorrente conta2 = new ContaCorrente(cliente2, 500);
+        conta2.setNumeroConta("7802");
+        conta2.setAgencia("67");
+        conta2.setSaldo(8000);
+
+        conta1.transferir(conta2, 1000.0);
+
+        double saldoAtualizado = 2000;
+        double saldo = conta1.getSaldo();
+
+        Assertions.assertEquals(saldoAtualizado, saldo);
     }
     @Test
     @DisplayName("Deveria Testar transferencia em Conta Corrente sem saldo.")//não dar certo o valor do saque (saque > saldo)

@@ -39,6 +39,8 @@ public class ContaCorrente extends Conta implements ImpressaoInterface {
         }
     }
     public boolean transferir(Conta destino, double valor) {
+        double novoSaldo = getSaldo() - valor ;
+        setSaldo(novoSaldo);
         return false;
     }
     @Override
