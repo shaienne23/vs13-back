@@ -25,7 +25,18 @@ public class ContaCorrente extends Conta implements ImpressaoInterface {
     }
     @Override
     public boolean sacar(double valor) {
-        return false;
+        if (valor <= 0) {
+            System.out.println("Valor de saque inválido. O valor deve ser maior que zero.");
+            return false;
+        }
+        if (getSaldo() >= valor) {
+            setSaldo(getSaldo() - valor);
+            System.out.println("Saque de " + valor + " realizado com sucesso. Novo saldo: " + getSaldo());
+            return true;
+        } else {
+            System.out.println("Saldo insuficiente para saque.");
+            return false;
+        }
     }
     public boolean transferir(Conta destino, double valor) {
         return false;
