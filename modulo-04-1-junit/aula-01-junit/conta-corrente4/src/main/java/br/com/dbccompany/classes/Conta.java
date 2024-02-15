@@ -54,6 +54,10 @@ public abstract class Conta implements MovimentacaoInterface {
 
     public boolean depositar(double valorDeposito) {
         if (valorDeposito <= 0) {
+            double novoSaldo = getSaldo() - valorDeposito;
+            setSaldo(novoSaldo);
+            System.out.println(novoSaldo);
+            System.out.println( valorDeposito );
             System.out.println("---------------DEPOSITO CONTA CORRENTE-------------------");
             System.out.println("Valor para depósito inválido, para depósito é necessário valores acima de 0.");
             System.out.println("----------------------------------------------------");

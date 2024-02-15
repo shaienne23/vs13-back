@@ -140,6 +140,24 @@ class ContaTest {
     @Test
     @DisplayName("Deveria Testar Deposito e verificar saldo na Conta Corrente.")
     void testarDepositoEVerificarSaldoComSucesso(){
+        Cliente cliente1 = new Cliente();
+        ContaCorrente conta1 = new ContaCorrente(cliente1, 500);
+        conta1.setNumeroConta("7801");
+        conta1.setAgencia("66");
+        conta1.setSaldo(3000);
+
+        Cliente cliente2 = new Cliente();
+        ContaCorrente conta2 = new ContaCorrente(cliente2, 500);
+        conta2.setNumeroConta("7802");
+        conta2.setAgencia("67");
+        conta2.setSaldo(8000);
+
+        conta1.depositar(2000);
+
+        double saldoAtualizado = 5000;
+        double saldo = conta1.getSaldo();
+
+        Assertions.assertEquals(saldoAtualizado, saldo);
 
     }
     @Test
