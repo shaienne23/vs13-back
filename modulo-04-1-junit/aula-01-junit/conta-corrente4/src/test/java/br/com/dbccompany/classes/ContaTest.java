@@ -133,7 +133,6 @@ class ContaTest {
         conta2.setSaldo(8000);
 
         boolean saque = conta1.transferir(conta2, 10000.0);
-        System.out.println(saque);
         Assertions.assertFalse(saque);
 
     }
@@ -163,6 +162,20 @@ class ContaTest {
     @Test
     @DisplayName("Deveria Testar Deposito negativo na Conta Corrente.")
     void testarDepositoNegativo(){
+        Cliente cliente1 = new Cliente();
+        ContaCorrente conta1 = new ContaCorrente(cliente1, 500);
+        conta1.setNumeroConta("7801");
+        conta1.setAgencia("66");
+        conta1.setSaldo(3000);
 
+        Cliente cliente2 = new Cliente();
+        ContaCorrente conta2 = new ContaCorrente(cliente2, 500);
+        conta2.setNumeroConta("7802");
+        conta2.setAgencia("67");
+        conta2.setSaldo(8000);
+
+        boolean depositoNegativo = conta1.depositar(-2000);
+        System.out.println(depositoNegativo);
+        Assertions.assertFalse(depositoNegativo);
     }
 }
