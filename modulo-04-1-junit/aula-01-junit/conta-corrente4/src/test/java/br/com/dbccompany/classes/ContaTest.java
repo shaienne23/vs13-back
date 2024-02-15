@@ -35,7 +35,6 @@ class ContaTest {
     @Test
     @DisplayName("Deveria Testar Saque  e verificar saldo na conta poupança.")//deve creditar taxa antes
     void testarSaqueContaPoupancaEVerificarSaldoComSucesso(){
-        double JUROS_MENSAL = 1.01;
         Cliente cliente = new Cliente();
         ContaPoupanca contaPoupanca = new ContaPoupanca(
             "123456", "001", 1000.0, cliente);
@@ -49,12 +48,18 @@ class ContaTest {
         double saldoAtual = contaPoupanca.getSaldo();
 
         Assertions.assertEquals(novoSaldoEsperado, saldoAtual);
-
     }
     @Test
     @DisplayName("Deveria Testar Saque na Conta Poupança.")//não dar certo o valor do saque (saque > saldo)
     void testarSaqueContaPoupancaSemSaldo(){
+        Cliente cliente = new Cliente();
+        ContaPoupanca contaPoupanca = new ContaPoupanca(
+                "123456", "001", 1000.0, cliente);
+        contaPoupanca.creditarTaxa();
+        double saldoInicial = contaPoupanca.getSaldo();
 
+        boolean saque = contaPoupanca.sacar(6000);
+        Assertions.assertFalse(saque);
     }
     @Test
     @DisplayName("Deveria Testar Saque e verificar saldo na Contade pagamento.")
