@@ -9,7 +9,7 @@ public class ContaPagamento extends Conta implements ImpressaoInterface {
         super(cliente);
     }
 
-    private double calcularTaxaSaque() {
+    double calcularTaxaSaque() {
         return TAXA_SAQUE;
     }
 
@@ -19,6 +19,8 @@ public class ContaPagamento extends Conta implements ImpressaoInterface {
 
         if (valor > 0 && getSaldo() >= valorTotalSaque) {
             super.sacar(valorTotalSaque);
+            double novoSaldo = getSaldo() - valor + calcularTaxaSaque();
+            setSaldo(novoSaldo);
             System.out.println("--------------SAQUE CONTA PAGAMENTO--------------");
             System.out.println("Saque de R$" + valor + " realizado com sucesso. Taxa de saque: R$" + calcularTaxaSaque());
             System.out.println("----------------------------------------------------");

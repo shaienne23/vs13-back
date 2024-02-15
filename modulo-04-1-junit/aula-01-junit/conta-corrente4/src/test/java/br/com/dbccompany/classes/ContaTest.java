@@ -62,8 +62,23 @@ class ContaTest {
         Assertions.assertFalse(saque);
     }
     @Test
-    @DisplayName("Deveria Testar Saque e verificar saldo na Contade pagamento.")
+    @DisplayName("Deveria Testar Saque e verificar saldo na Conta de pagamento.")
     void testarSaqueContaPagamentoEVerificarSaldoComSucesso(){
+        Cliente cliente1 = new Cliente();
+        ContaPagamento contaPagamento = new ContaPagamento(cliente1, 1000);
+        contaPagamento.setNumeroConta("5678");
+        contaPagamento.setAgencia("99");
+        contaPagamento.setSaldo(2000);
+
+        double saldoInicial = contaPagamento.getSaldo();
+
+        boolean saque = contaPagamento.sacar(600);
+        Assertions.assertTrue(saque);
+
+        double novoSaldoEsperado = saldoInicial  - 600.0 + contaPagamento.calcularTaxaSaque();
+        double saldoAtual = contaPagamento.getSaldo();
+
+        Assertions.assertEquals(novoSaldoEsperado, saldoAtual);
 
     }
     @Test
