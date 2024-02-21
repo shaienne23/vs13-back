@@ -42,4 +42,5 @@ public class ConsumerService {
     ) throws JsonProcessingException {
         log.info("#### offset -> '{}' key -> '{}' -> Partition -> '{}' Topic -> '{}' msg -> '{}'   ", offset, key, partitionId, topic, message);
     }
+
 }
