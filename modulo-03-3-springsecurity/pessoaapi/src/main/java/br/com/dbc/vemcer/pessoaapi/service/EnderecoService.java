@@ -6,18 +6,22 @@ import br.com.dbc.vemcer.pessoaapi.entity.*;
 import br.com.dbc.vemcer.pessoaapi.exceptions.EntidadeNaoEncontradaException;
 import br.com.dbc.vemcer.pessoaapi.exceptions.RegraDeNegocioException;
 import br.com.dbc.vemcer.pessoaapi.repository.EnderecoRepository;
+import br.com.dbc.vemcer.pessoaapi.repository.PessoaRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Service
 @Slf4j
 public class EnderecoService {
     private final EnderecoRepository enderecoRepository;
-    private final PessoaService pessoaService;
+    private final PessoaRepository pessoaRepository;
     private final ObjectMapper objectMapper;
 
     private final String NOT_FOUND_MESSAGE = "ID de endereço nao encontrado";
@@ -48,6 +52,19 @@ public class EnderecoService {
 //                .map(endereco -> objectMapper.convertValue(endereco, EnderecoDTO.class))
 //                .collect(Collectors.toList());
 //    }
+    public List<EnderecoDTO> findAllByPessoaId(Integer idPessoa){
+        Optional<Pessoa> pessoa = pessoaRepository.findById(idPessoa);
+
+        if (pessoa.isPresent()) {
+            List<Endereco> enderecos = enderecoRepository.findAllByPessoas(pessoa.get());
+
+            return enderecos.stream()
+                    .map(endereco -> objectMapper.convertValue(endereco, EnderecoDTO.class))
+                    .collect(Collectors.toList());
+        } else {
+            return Collections.emptyList();
+        }
+    }
 
     public EnderecoDTO create(EnderecoCreateDTO endereco) {
         Endereco enderecoEntity = converterDTO(endereco);

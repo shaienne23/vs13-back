@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/modulo-04-1-junit/aula-01-junit/conta-corrente4/pom.xml" />
+        <option value="$PROJECT_DIR$/modulo-04-3-kafka/aula-01/consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/modulo-04-3-kafka/aula-01/producer/pom.xml" />
+        <option value="$PROJECT_DIR$/modulo-04-3-kafka/aula-01/produtor-consumidor/pom.xml" />
+        <option value="$PROJECT_DIR$/modulo-04-3-kafka/aula-02/chat-kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/modulo-03-1-springweb/aula-02/pessoaapi/pom.xml" />
+        <option value="$PROJECT_DIR$/modulo-03-1-springweb/aula-03/pessoaapi/pom.xml" />
+        <option value="$PROJECT_DIR$/modulo-03-1-springweb/aula-04/pessoaapi/pom.xml" />
+        <option value="$PROJECT_DIR$/modulo-03-1-springweb/aula-05/pessoaapi/pom.xml" />
+        <option value="$PROJECT_DIR$/modulo-03-1-springweb/aula-06/pessoaapi/pom.xml" />
+        <option value="$PROJECT_DIR$/modulo-03-1-springweb/pessoaapi/pom.xml" />
+        <option value="$PROJECT_DIR$/modulo-03-2-springdata/pessoaapi/pom.xml" />
+        <option value="$PROJECT_DIR$/modulo-03-3-springsecurity/aula-01/pessoaapi/pom.xml" />
+        <option value="$PROJECT_DIR$/modulo-03-3-springsecurity/aula-02/pessoaapi/pom.xml" />
+        <option value="$PROJECT_DIR$/modulo-03-3-springsecurity/pessoaapi/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>

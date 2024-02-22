@@ -38,12 +38,12 @@ public class EnderecoControler implements IEnderecoController {
         List<EnderecoDTO> enderecosListados = enderecoService.listByIdEndereco(id);
         return new ResponseEntity<>(enderecosListados, HttpStatus.OK);
     }
-//    @GetMapping("/{idPessoa}/pessoa")
-//    public ResponseEntity<List<EnderecoDTO>>findAllByPessoaId(@PathVariable("idPessoa") Integer idPessoa){
-//        log.info("Listando endereços por idPessoa.");
-//        List<EnderecoDTO> enderecosListadosIdPessoa = enderecoService.findAllByPessoaId(idPessoa);
-//        return new ResponseEntity<>(enderecosListadosIdPessoa, HttpStatus.OK);
-//    }
+    @GetMapping("/{idPessoa}/pessoa")
+    public ResponseEntity<List<EnderecoDTO>>findAllByPessoaId(@PathVariable("idPessoa") Integer idPessoa){
+        log.info("Listando endereços por idPessoa.");
+        List<EnderecoDTO> enderecosListadosIdPessoa = enderecoService.findAllByPessoaId(idPessoa);
+        return new ResponseEntity<>(enderecosListadosIdPessoa, HttpStatus.OK);
+    }
     @GetMapping ("/byname")
     public ResponseEntity<List<EnderecoDTO>> findAllByEstadoContains(@RequestParam("estado") String estado){
         log.info("Listando endereços por Estado.");

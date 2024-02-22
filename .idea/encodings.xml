@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/modulo-03-1-springweb/aula-02/pessoaapi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-1-springweb/aula-02/pessoaapi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-1-springweb/aula-03/pessoaapi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-1-springweb/aula-03/pessoaapi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-1-springweb/aula-04/pessoaapi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-1-springweb/aula-04/pessoaapi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-1-springweb/aula-05/pessoaapi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-1-springweb/aula-05/pessoaapi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-1-springweb/aula-06/pessoaapi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-1-springweb/aula-06/pessoaapi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-1-springweb/pessoaapi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-1-springweb/pessoaapi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-2-springdata/pessoaapi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-2-springdata/pessoaapi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-3-springsecurity/aula-01/pessoaapi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-3-springsecurity/aula-01/pessoaapi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-3-springsecurity/aula-02/pessoaapi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-3-springsecurity/aula-02/pessoaapi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-3-springsecurity/pessoaapi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-03-3-springsecurity/pessoaapi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-04-1-junit/aula-01-junit/conta-corrente4/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-04-1-junit/aula-01-junit/conta-corrente4/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-04-3-kafka/aula-01/consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-04-3-kafka/aula-01/consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-04-3-kafka/aula-01/producer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-04-3-kafka/aula-01/producer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-04-3-kafka/aula-01/produtor-consumidor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-04-3-kafka/aula-01/produtor-consumidor/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-04-3-kafka/aula-02/chat-kafka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/modulo-04-3-kafka/aula-02/chat-kafka/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

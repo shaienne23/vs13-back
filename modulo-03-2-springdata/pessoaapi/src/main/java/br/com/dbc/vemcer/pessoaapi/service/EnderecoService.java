@@ -41,13 +41,13 @@ public class EnderecoService {
                 .map(this::retornarDTO)
                 .collect(Collectors.toList());
     }
-//    public List<EnderecoDTO> listByIdPessoa(Integer idPessoa) {
-//        List<Endereco> enderecos = enderecoRepository.listByIdPessoa(idPessoa);
-//
-//        return enderecos.stream()
-//                .map(endereco -> objectMapper.convertValue(endereco, EnderecoDTO.class))
-//                .collect(Collectors.toList());
-//    } verificar como puxar o id de pessoa
+    public List<EnderecoDTO> listByIdPessoa(Integer idPessoa) {
+        List<Endereco> enderecos = enderecoRepository.listByIdPessoa(idPessoa);
+
+        return enderecos.stream()
+                .map(endereco -> objectMapper.convertValue(endereco, EnderecoDTO.class))
+                .collect(Collectors.toList());
+    }
 
     public EnderecoDTO create(EnderecoCreateDTO endereco) {
         Endereco enderecoEntity = converterDTO(endereco);

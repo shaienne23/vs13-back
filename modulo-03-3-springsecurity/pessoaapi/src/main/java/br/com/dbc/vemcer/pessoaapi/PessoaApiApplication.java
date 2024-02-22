@@ -6,7 +6,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableFeignClients
-
+//@EnableMongoRepositories
 public class PessoaApiApplication {
 
 	public static void main(String[] args) {

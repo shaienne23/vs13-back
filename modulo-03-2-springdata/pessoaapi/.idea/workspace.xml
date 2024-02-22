@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b819d9e3-04ec-4bfc-bc6f-5ca683a8eb32" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/EnderecoControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/EnderecoControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/EnderecoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/EnderecoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/PessoaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/PessoaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Contato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Endereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Endereco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/PessoaCompleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/PessoaCompleta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/EnderecoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/EnderecoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/service/EnderecoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/service/EnderecoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/service/PessoaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemcer/pessoaapi/service/PessoaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/controller/EnderecoControler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/controller/EnderecoControler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/dto/ContatoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/dto/ContatoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/dto/EnderecoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/dto/EnderecoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/dto/PessoaCompletaDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/dto/PessoaCompletaDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/dto/PessoaDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/dto/PessoaDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/entity/Endereco.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/entity/Endereco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/entity/Pessoa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/entity/Pessoa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/entity/PessoaCompleta.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/entity/PessoaCompleta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/entity/Pet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/entity/Pet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/repository/EnderecoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/repository/EnderecoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/service/EnderecoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/service/EnderecoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/service/PessoaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dbc/vemcer/pessoaapi/service/PessoaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-01/task-01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-01/task01-springweb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-02/pessoaapi/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-02/pessoaapi/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-02/pessoaapi/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-02/pessoaapi/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-02/pessoaapi/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-02/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/PessoaapiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-02/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/ContatoControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-02/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/PessoaControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-02/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Contato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-02/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Pessoa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-02/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/TipoContato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-02/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/ContatoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-02/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/PessoaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-02/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/ContatoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-02/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/PessoaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-02/pessoaapi/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-02/pessoaapi/src/test/java/br/com/dbc/vemcer/pessoaapi/PessoaapiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/.idea/aula-03.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/exercicio-01-aula-03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/exercicio-03-aula-03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/exercicio.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/PessoaapiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/ContatoControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/EnderecoControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/PessoaControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Contato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Endereco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Pessoa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/TipoContato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/TipoEndereco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/ContatoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/EnderecoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/PessoaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/ContatoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/EnderecoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/PessoaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/src/test/java/br/com/dbc/vemcer/pessoaapi/PessoaapiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/PessoaapiApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/controller/ContatoControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/controller/EnderecoControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/controller/PessoaControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/entity/Contato.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/entity/Endereco.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/entity/Pessoa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/entity/TipoContato.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/entity/TipoEndereco.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/repository/ContatoRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/repository/EnderecoRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/repository/PessoaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/service/ContatoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/service/EnderecoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/service/PessoaService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/pessoaapi/target/test-classes/br/com/dbc/vemcer/pessoaapi/PessoaapiApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-03/task03.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/Exercicio-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/Task-04-pag02.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/Task-04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/PessoaapiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/ContatoControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/EnderecoControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/PessoaControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Contato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Endereco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Pessoa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/TipoContato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/TipoEndereco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/exceptions/CustomGlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/exceptions/RegraDeNegocioException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/ContatoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/EnderecoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/PessoaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/ContatoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/EnderecoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/PessoaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-04/pessoaapi/src/test/java/br/com/dbc/vemcer/pessoaapi/PessoaapiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/Logs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/Lombok.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/PessoaapiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/ContatoControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/EnderecoControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/PessoaControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/ContatoCreateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/ContatoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/EnderecoCreateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/EnderecoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/PessoaCreateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/PessoaDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Contato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Endereco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Pessoa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/TipoContato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/TipoEndereco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/exceptions/CustomGlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/exceptions/RegraDeNegocioException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/ContatoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/EnderecoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/PessoaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/ContatoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/EnderecoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/PessoaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/resources/application-prd.properties.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/src/test/java/br/com/dbc/vemcer/pessoaapi/PessoaapiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/application-prd.properties.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/PessoaapiApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/controller/ContatoControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/controller/EnderecoControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/controller/PessoaControler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/dto/ContatoCreateDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/dto/ContatoDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/dto/EnderecoCreateDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/dto/EnderecoDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/dto/PessoaCreateDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/dto/PessoaDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/entity/Contato.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/entity/Endereco.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/entity/Pessoa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/entity/TipoContato.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/entity/TipoEndereco.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/exceptions/CustomGlobalExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/exceptions/RegraDeNegocioException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/repository/ContatoRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/repository/EnderecoRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/repository/PessoaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/service/ContatoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/service/EnderecoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/classes/br/com/dbc/vemcer/pessoaapi/service/PessoaService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-05/pessoaapi/target/test-classes/br/com/dbc/vemcer/pessoaapi/PessoaapiApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/Task- aula06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/exercicio-01-aula06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/exercicio-02-aula06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/exercicio-03-aula06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/PessoaapiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/config/PropertiesReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/ContatoControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/EnderecoControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/PessoaControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/ContatoCreateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/ContatoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/EnderecoCreateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/EnderecoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/PessoaCreateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/PessoaDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Contato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Endereco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Pessoa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/TipoContato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/TipoEndereco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/exceptions/CustomGlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/exceptions/RegraDeNegocioException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/ContatoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/EnderecoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/PessoaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/ContatoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/EmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/EnderecoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/PessoaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/resources/application-prd.properties.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/resources/templates/DELETE-ENDERECO-email-template.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/resources/templates/DELETE-PESSOA-email-template.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/resources/templates/GET-PESSOA-email-template.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/resources/templates/POST-ENDERECO-email-template.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/resources/templates/POST-PESSOA-email-template.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/resources/templates/PUT-ENDERECO-email-template.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/resources/templates/PUT-PESSOA-email-template.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/main/resources/templates/email-template.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-06/pessoaapi/src/test/java/br/com/dbc/vemcer/pessoaapi/PessoaapiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-07/Exercicio-01.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-07/Task-07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/aula-08/exercicio-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/modulo-03-springweb.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/PessoaapiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/client/DadosPessoaisClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/config/FeignConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/config/OpenApiConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/config/PropertiesReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/config/SimpleErrorDecode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/ContatoControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/DadosPessoaisController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/EnderecoControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/PessoaControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/interfaces/IContatoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/interfaces/IDadosPessoaisController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/interfaces/IEnderecoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/controller/interfaces/IPessoaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/ContatoCreateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/ContatoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/DadosPessoaisDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/EnderecoCreateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/EnderecoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/PessoaCreateDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/PessoaDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/dto/Sexo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Contato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Endereco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/Pessoa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/TipoContato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/entity/TipoEndereco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/exceptions/CustomGlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/exceptions/RegraDeNegocioException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/ContatoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/EnderecoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/repository/PessoaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/ContatoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/DadosPessoaisService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/EmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/EnderecoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/java/br/com/dbc/vemcer/pessoaapi/service/PessoaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/resources/application-prd.properties.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/resources/templates/DELETE-ENDERECO-email-template.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/resources/templates/DELETE-PESSOA-email-template.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/resources/templates/GET-PESSOA-email-template.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/resources/templates/POST-ENDERECO-email-template.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/resources/templates/POST-PESSOA-email-template.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/resources/templates/PUT-ENDERECO-email-template.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/resources/templates/PUT-PESSOA-email-template.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/main/resources/templates/email-template.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo-03-springweb/pessoaapi/src/test/java/br/com/dbc/vemcer/pessoaapi/PessoaapiApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2bdVgEmJ94kU60Pdy1eQQPFVSeE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "full.screen.before.presentation.mode": "false",
+    "last_opened_file_path": "C:/Users/rafae/DBC-TASKS/TASKS/DBC-Exercicios-Tasks/vs13-squad02-alfabetizAi",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.splitter.proportion": "0.30510315"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="br.com.dbc.vemcer.pessoaapi.repository" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.dbc.vemcer.pessoaapi.service" />
+      <recent name="br.com.dbc.vemcer.pessoaapi.dto" />
+      <recent name="br.com.dbc.vemcer.pessoaapi.controller" />
+      <recent name="br.com.dbc.vemcer.pessoaapi.repository" />
+      <recent name="br.com.dbc.vemcer.pessoaapi.entity" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="PessoaApiApplication" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.dbc.vemcer.pessoaapi.PessoaApiApplication" />
+      <module name="pessoaapi" />
+      <option name="VM_PARAMETERS" value="-Dspring.profiles.active= -Dspring.mail.username=shaienne.oliveira@dbccompany.com.br -Dspring.mail.password=2@etNawr -Dspring.datasource.username=system -Dspring.datasource.password=oracle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.dbc.vemcer.pessoaapi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b819d9e3-04ec-4bfc-bc6f-5ca683a8eb32" name="Changes" comment="" />
+      <created>1706545054711</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706545054711</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

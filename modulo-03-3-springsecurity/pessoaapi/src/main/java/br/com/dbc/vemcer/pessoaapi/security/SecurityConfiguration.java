@@ -30,10 +30,10 @@ public class SecurityConfiguration {
                 .csrf().disable()
                 .authorizeHttpRequests((authz) -> authz
                         .antMatchers("/auth").permitAll()
-                        .antMatchers( "/auth/cadastrar").permitAll()
+//                        .antMatchers( "/auth/cadastrar").permitAll()
                         .antMatchers( HttpMethod.POST, "/usuario").hasRole("ADMIN")//● Regra geral: somente o ROLE_ADMIN pode cadastrar usuários;
                         .antMatchers( HttpMethod.GET, "/Pessoa", "/Contato", "/Endereco", "/Pet").hasRole("MARKETING")//● ROLE_MARKETING: pode acessar somente os GETs de Pessoa, Contato, Endereço e Pet;
-                        .antMatchers("/pessoa/**", "/contato", "/endereco").hasRole("USUARIO")//● ROLE_USUARIO: pode fazer qualquer operação em pessoa, contato e endereço;
+                        .antMatchers("/pessoa/**", "/contato/**", "/endereco/**").hasRole("USUARIO")//● ROLE_USUARIO: pode fazer qualquer operação em pessoa, contato e endereço;
                         .antMatchers( "/**").hasRole("ADMIN")//● ROLE_ADMIN: pode acessar todos os endpoints;
                         .anyRequest().authenticated()
                 );

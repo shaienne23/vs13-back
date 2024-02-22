@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="pessoaapi (1)" />
+        <module name="pessoaapi (2)" />
+        <module name="pessoaapi (3)" />
+        <module name="pessoaapi (4)" />
+        <module name="chat-kafka" />
+        <module name="pessoaapi" />
+        <module name="pessoaapi (9)" />
+        <module name="producer" />
+        <module name="produtor-consumidor" />
+        <module name="conta-corrente4" />
+        <module name="pessoaapi (5)" />
+        <module name="pessoaapi (6)" />
+        <module name="consumer" />
+        <module name="pessoaapi (7)" />
+        <module name="pessoaapi (8)" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="chat-kafka" target="17" />
+      <module name="consumer" target="17" />
+      <module name="conta-corrente4" target="17" />
+      <module name="pessoaapi" target="17" />
+      <module name="pessoaapi (1)" target="17" />
+      <module name="pessoaapi (2)" target="17" />
+      <module name="pessoaapi (3)" target="17" />
+      <module name="pessoaapi (4)" target="17" />
+      <module name="pessoaapi (5)" target="17" />
+      <module name="pessoaapi (6)" target="17" />
+      <module name="pessoaapi (7)" target="17" />
+      <module name="pessoaapi (8)" target="17" />
+      <module name="pessoaapi (9)" target="17" />
+      <module name="producer" target="17" />
+      <module name="produtor-consumidor" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="chat-kafka" options="-parameters" />
+      <module name="consumer" options="-parameters" />
+      <module name="pessoaapi" options="-parameters" />
+      <module name="pessoaapi (1)" options="-parameters" />
+      <module name="pessoaapi (2)" options="-parameters" />
+      <module name="pessoaapi (3)" options="-parameters" />
+      <module name="pessoaapi (4)" options="-parameters" />
+      <module name="pessoaapi (5)" options="-parameters" />
+      <module name="pessoaapi (6)" options="-parameters" />
+      <module name="pessoaapi (7)" options="-parameters" />
+      <module name="pessoaapi (8)" options="-parameters" />
+      <module name="pessoaapi (9)" options="-parameters" />
+      <module name="producer" options="-parameters" />
+      <module name="produtor-consumidor" options="-parameters" />
+    </option>
+  </component>
+</project>

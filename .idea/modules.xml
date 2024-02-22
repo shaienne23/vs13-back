@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/modulo-04-3-kafka/aula-02/chat-kafka/chat-kafka.iml" filepath="$PROJECT_DIR$/modulo-04-3-kafka/aula-02/chat-kafka/chat-kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo-04-3-kafka/aula-01/consumer/consumer.iml" filepath="$PROJECT_DIR$/modulo-04-3-kafka/aula-01/consumer/consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo-04-1-junit/aula-01-junit/conta-corrente4/conta-corrente4.iml" filepath="$PROJECT_DIR$/modulo-04-1-junit/aula-01-junit/conta-corrente4/conta-corrente4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo-03-1-springweb/aula-02/pessoaapi/pessoaapi.iml" filepath="$PROJECT_DIR$/modulo-03-1-springweb/aula-02/pessoaapi/pessoaapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo-03-1-springweb/aula-03/pessoaapi/pessoaapi (1).iml" filepath="$PROJECT_DIR$/modulo-03-1-springweb/aula-03/pessoaapi/pessoaapi (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo-03-1-springweb/aula-04/pessoaapi/pessoaapi (2).iml" filepath="$PROJECT_DIR$/modulo-03-1-springweb/aula-04/pessoaapi/pessoaapi (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo-03-1-springweb/aula-05/pessoaapi/pessoaapi (3).iml" filepath="$PROJECT_DIR$/modulo-03-1-springweb/aula-05/pessoaapi/pessoaapi (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo-03-1-springweb/aula-06/pessoaapi/pessoaapi (4).iml" filepath="$PROJECT_DIR$/modulo-03-1-springweb/aula-06/pessoaapi/pessoaapi (4).iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo-03-1-springweb/pessoaapi/pessoaapi (5).iml" filepath="$PROJECT_DIR$/modulo-03-1-springweb/pessoaapi/pessoaapi (5).iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo-03-2-springdata/pessoaapi/pessoaapi (6).iml" filepath="$PROJECT_DIR$/modulo-03-2-springdata/pessoaapi/pessoaapi (6).iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo-03-3-springsecurity/aula-01/pessoaapi/pessoaapi (7).iml" filepath="$PROJECT_DIR$/modulo-03-3-springsecurity/aula-01/pessoaapi/pessoaapi (7).iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo-03-3-springsecurity/aula-02/pessoaapi/pessoaapi (8).iml" filepath="$PROJECT_DIR$/modulo-03-3-springsecurity/aula-02/pessoaapi/pessoaapi (8).iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo-03-3-springsecurity/pessoaapi/pessoaapi (9).iml" filepath="$PROJECT_DIR$/modulo-03-3-springsecurity/pessoaapi/pessoaapi (9).iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo-04-3-kafka/aula-01/producer/producer.iml" filepath="$PROJECT_DIR$/modulo-04-3-kafka/aula-01/producer/producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modulo-04-3-kafka/aula-01/produtor-consumidor/produtor-consumidor.iml" filepath="$PROJECT_DIR$/modulo-04-3-kafka/aula-01/produtor-consumidor/produtor-consumidor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/vs13-back.iml" filepath="$PROJECT_DIR$/.idea/vs13-back.iml" />
+    </modules>
+  </component>
+</project>
