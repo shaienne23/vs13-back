@@ -58,7 +58,7 @@ public class Producer {
     public void sendToChatGeral(MensagemCreateDTO mensagemCreateDTO) throws JsonProcessingException {
         MensagemDTO mensagemDTO = objectMapper.convertValue(mensagemCreateDTO, MensagemDTO.class);
         mensagemDTO.setDataCriacao(LocalDateTime.now());
-        mensagemDTO.setUsuario(NomeChat.RAFA.name());
+        mensagemDTO.setUsuario(NomeChat.SHAIENNE_OLIVEIRA_DOS_SANTOS.name());
         send(mensagemDTO, NomeChat.AA_GERAL);
     }
 
@@ -66,7 +66,7 @@ public class Producer {
         MensagemDTO mensagemDTO = new MensagemDTO();
         mensagemDTO.setMensagem(mensagem);
         mensagemDTO.setDataCriacao(LocalDateTime.now());
-        mensagemDTO.setUsuario(NomeChat.RAFA.name());
+        mensagemDTO.setUsuario(NomeChat.SHAIENNE_OLIVEIRA_DOS_SANTOS.name());
         send(mensagemDTO, nomeChat);
     }
 }

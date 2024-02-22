@@ -10,8 +10,6 @@ import org.springframework.kafka.annotation.TopicPartition;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
-import java.time.format.DateTimeFormatter;
-
 @Component
 @Slf4j
 @RequiredArgsConstructor
@@ -27,7 +25,7 @@ public class ConsumerService {
     )
     public void consumeChatGeral(@Payload String mensagem) throws JsonProcessingException {
         MensagemDTO mensagemDTO = objectMapper.readValue(mensagem, MensagemDTO.class);
-        //TODO log.info
+        log.info("{} [{}]: {}", mensagemDTO.getDataCriacao().toString(), mensagemDTO.getUsuario(), mensagemDTO.getMensagem());;
     }
 
     @KafkaListener(
@@ -36,6 +34,6 @@ public class ConsumerService {
     )
     public void consumeMeuChat(@Payload String mensagem) throws JsonProcessingException {
         MensagemDTO mensagemDTO = objectMapper.readValue(mensagem, MensagemDTO.class);
-        //TODO log.info
+        log.info("{} [{}]: {}", mensagemDTO.getDataCriacao().toString(), mensagemDTO.getUsuario(), mensagemDTO.getMensagem());
     }
 }
