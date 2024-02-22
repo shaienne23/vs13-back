@@ -30,4 +30,5 @@ public class FeignConfig {
                 .errorDecoder(new SimpleErrorDecode())
                 .decoder(new JacksonDecoder());
     }
+
 }
